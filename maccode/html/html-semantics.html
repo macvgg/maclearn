@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Semantics | MacCode</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="/maccode/" class="logo">
+        <img src="/maccode/logo.png" alt="MacWeb Logo" />
+      </a>
+      <a href="/maccode/html/" class="nav-link">HTML</a>
+      <a href="/maccode/css/" class="nav-link">CSS</a>
+      <a href="/maccode/js/" class="nav-link">JavaScript</a>
+      <a href="/maccode/references/" class="nav-link">Refrences</a>
+      <a href="/maccode/about.html" class="nav-link">About</a>
+    </nav>
+    <div class="wrapper side-wrapper">
+      <div class="sidebar side">
+        <ul style="list-style-type: none">
+          <h2>HTML Basics</h2>
+          <a href="What-is-coding.html">
+            <li>What Is Coding?</li>
+          </a>
+          <a href="what-is-html.html">
+            <li>What Is HTML?</li>
+          </a>
+          <a href="more-html-tags.html">
+            <li>More HTML Tags!</li>
+          </a>
+          <a href="html-basic-structure.html">
+            <li>HTML Basic Structure</li>
+          </a>
+          <a href="html-article.html">
+            <li>HTML Article Structure</li>
+          </a>
+          <a href="html-img.html">
+            <li>HTML Image</li>
+          </a>
+          <a href="html-hyperlink.html">
+            <li>HTML Hyperlink</li>
+          </a>
+          <a href="html-list.html">
+            <li>HTML List</li>
+          </a>
+          <a href="html-formatting.html">
+            <li>HTML Formatting</li>
+          </a>
+          <a href="html-attributes.html">
+            <li>HTML Attributes</li>
+          </a>
+          <a href="beginner-quiz.html">
+            <li>Unit Quiz</li>
+          </a>
+          <br />
+          <h2>HTML Advanced</h2>
+
+          <a href="html-forms.html">
+            <li>HTML Forms</li>
+          </a>
+          <a href="html-semantics.html" style="font-weight: bold; color: gold">
+            <li>HTML Semantics</li>
+          </a>
+          <a href="html-special-characters.html">
+            <li>HTML Special Characters</li>
+          </a>
+          <a href="html-tables.html">
+            <li>HTML Tables</li>
+          </a>
+          <a href="html-multimedia.html">
+            <li>HTML Multimedia</li>
+          </a>
+          <a href="html-meta.html">
+            <li>HTML Meta Tag</li>
+          </a>
+          <a href="html-embed.html">
+            <li>HTML Embed</li>
+          </a>
+          <a href="html-canvas.html">
+            <li>HTML Canvas</li>
+          </a>
+          <a href="html-api.html">
+            <li>HTML API</li>
+          </a>
+          <a href="html-svg.html">
+            <li>HTML SVG</li>
+          </a>
+          <a href="advanced-quiz.html">
+            <li>Unit Quiz</li>
+          </a>
+          <br />
+          <h2>Other</h2>
+          <a href="/reference/tags/">
+            <li>HTML Tag Reference</li>
+          </a>
+          <a href="/reference/tags/">
+            <li>HTML Attribute Reference</li>
+          </a>
+          <a href="more-html-tags.html">
+            <li>Web Developer</li>
+          </a>
+          <a href="html-article.html">
+            <li>Web DEV Reference</li>
+          </a>
+          <a href="/reference/">
+            <li>Web DEV Tools</li>
+          </a>
+          <a href="html-img.html">
+            <li>Web DEV Community</li>
+          </a>
+          <a href="html-img.html">
+            <li>Web DEV Learning</li>
+          </a>
+          <a href="install-vs-code.html">
+            <li>Code Editor</li>
+          </a>
+          <a href="/about.html">
+            <li>About Us</li>
+          </a>
+          <br /><br /><br />
+        </ul>
+      </div>
+      <article class="article">
+        <h1>HTML Semantics</h1>
+        <h3 class="author">By Tony <span class="date">2023.4.25</span></h3>
+        <hr />
+        <p>
+          Having a clear and readable structure of HTML code can make it easier
+          for both you and other developers to read your code. Semantic tags are
+          HTML elements that describe the meaning of the content they contain.
+          They don't actually modify the content, but they separate contents so
+          it's easier to read, understand, and control different sections. This
+          is an example:
+        </p>
+        <code>
+          &ltheader&gt<br />
+          <span style="color: transparent" class="space">www</span
+          >&lth1&gtHeading&lt/h1&gt<br />
+          <span style="color: transparent" class="space">www</span
+          >&ltp&gtAuthor:John Doe&lt/p&gt<br />
+          &ltheader&gt<br />
+          &ltnav&gt<br />
+          <span style="color: transparent" class="space">www</span
+          >&ltli&gtHome&lt/li&gt<br />
+          <span style="color: transparent" class="space">www</span
+          >&ltli&gtAbout&lt/li&gt<br />
+          &lt/nav&gt<br />
+          &ltarticle&gt<br />
+          <span style="color: transparent" class="space">www</span
+          >&ltsection&gt<br />
+          <span style="color: transparent" class="space">wwwwww</span
+          >&lth2&gtSection 1&lt/h2&gt<br />
+          <span style="color: transparent" class="space">wwwwww</span
+          >&ltp&gtLorem ipsum dolor sit amet.&lt/p&gt<br />
+          <span style="color: transparent" class="space">www</span
+          >&lt/section&gt<br />
+          <span style="color: transparent" class="space">www</span
+          >&ltsection&gt<br />
+          <span style="color: transparent" class="space">wwwwww</span
+          >&lth2&gtSection 2&lt/h2&gt<br />
+          <span style="color: transparent" class="space">wwwwww</span
+          >&ltp&gtRatione distinctio corrupti illo.&lt/p&gt<br />
+          <span style="color: transparent" class="space">www</span
+          >&lt/section&gt<br />
+          &lt/article&gt<br />
+          &ltfooter&gt<br />
+          <span style="color: transparent" class="space">www</span>&ltp&gtBy
+          John Doe 2023&lt/p&gt<br />
+          &lt/footer&gt
+        </code>
+        <p>
+          You maybe already noticed some tags name that have meanings like
+          "header", "section", or "footer". These tags are semantic elements. We
+          seperate content by these tags in the example above. &ltheader&gt tags
+          are for a page's heading, &ltnav&gt tags for navigation bar,
+          &ltarticle&gt for the main article, &ltsection&gt for a section in the
+          article, and &ltfooter&gt for footer which has additional information
+          about the website. Here is the output:
+        </p>
+        <img
+          src="/images/coding12.png"
+          alt="Output"
+          style="width: 100%; margin: 0"
+        />
+        <span style="font-size: 17px"
+          ><i>Note: The output is a screenshot due to styling issues.</i></span
+        ><br /><br />
+        <p>
+          &ltfigure&gt and &ltfigcaption&gt are also semantic tags. They often
+          appear together. The &ltfigure&gt tag is used to contain a graph,
+          diagram, or photo. The &ltfigcaption&gt tag is used to further explain
+          the figure. The &ltaside&gt tag is used for sidebars, such as ads,
+          navigation, or recommended articles, that usually appear on the sides
+          of a page (like the one on the left). HTML semantic tags come in handy
+          when you have a lot of information on one page and needs to be
+          organized into different parts.
+        </p>
+        <div class="buttons">
+          <button id="prevButton" class="button">◀ Previous</button>
+          <button id="myButton" class="button">Next ▶</button>
+          <script>
+            document
+              .getElementById("myButton")
+              .addEventListener("click", function () {
+                window.location.href = "html-special-characters.html";
+              });
+            document
+              .getElementById("prevButton")
+              .addEventListener("click", function () {
+                window.location.href = "html-forms.html";
+              });
+          </script>
+        </div>
+      </article>
+      <footer class="footer">
+        <div>
+          ©️ <span id="year">2023</span>
+          <a href="/" style="text-decoration: underline; color: white"
+            >MacWeb</a
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
