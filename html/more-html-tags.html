@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>More HTML Tags! | MacCode</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="/maccode/" class="logo">
+        <img src="/maccode/logo.png" alt="MacWeb Logo" />
+      </a>
+      <a href="/maccode/html/" class="nav-link">HTML</a>
+      <a href="/maccode/css/" class="nav-link">CSS</a>
+      <a href="/maccode/js/" class="nav-link">JavaScript</a>
+      <a href="/maccode/references/" class="nav-link">Refrences</a>
+      <a href="/maccode/about.html" class="nav-link">About</a>
+    </nav>
+    <div class="wrapper side-wrapper">
+      <div class="sidebar side">
+        <ul style="list-style-type: none">
+          <h2>HTML Basics</h2>
+          <a href="What-is-coding.html">
+            <li>What Is Coding?</li>
+          </a>
+          <a href="what-is-html.html">
+            <li>What Is HTML?</li>
+          </a>
+          <a href="more-html-tags.html" style="font-weight: bold; color: gold">
+            <li>More HTML Tags!</li>
+          </a>
+          <a href="html-basic-structure.html">
+            <li>HTML Basic Structure</li>
+          </a>
+          <a href="html-article.html">
+            <li>HTML Article Structure</li>
+          </a>
+          <a href="html-img.html">
+            <li>HTML Image</li>
+          </a>
+          <a href="html-hyperlink.html">
+            <li>HTML Hyperlink</li>
+          </a>
+          <a href="html-list.html">
+            <li>HTML List</li>
+          </a>
+          <a href="html-formatting.html">
+            <li>HTML Formatting</li>
+          </a>
+          <a href="html-attributes.html">
+            <li>HTML Attributes</li>
+          </a>
+          <a href="beginner-quiz.html">
+            <li>Unit Quiz</li>
+          </a>
+          <br />
+          <h2>HTML Advanced</h2>
+
+          <a href="html-forms.html">
+            <li>HTML Forms</li>
+          </a>
+          <a href="html-semantics.html">
+            <li>HTML Semantics</li>
+          </a>
+          <a href="html-special-characters.html">
+            <li>HTML Special Characters</li>
+          </a>
+          <a href="html-tables.html">
+            <li>HTML Tables</li>
+          </a>
+          <a href="html-multimedia.html">
+            <li>HTML Multimedia</li>
+          </a>
+          <a href="html-meta.html">
+            <li>HTML Meta Tag</li>
+          </a>
+          <a href="html-embed.html">
+            <li>HTML Embed</li>
+          </a>
+          <a href="html-canvas.html">
+            <li>HTML Canvas</li>
+          </a>
+          <a href="html-api.html">
+            <li>HTML API</li>
+          </a>
+          <a href="html-svg.html">
+            <li>HTML SVG</li>
+          </a>
+          <a href="advanced-quiz.html">
+            <li>Unit Quiz</li>
+          </a>
+          <br />
+          <h2>Other</h2>
+          <a href="/reference/tags/">
+            <li>HTML Tag Reference</li>
+          </a>
+          <a href="/reference/tags/">
+            <li>HTML Attribute Reference</li>
+          </a>
+          <a href="more-html-tags.html">
+            <li>Web Developer</li>
+          </a>
+          <a href="html-article.html">
+            <li>Web DEV Reference</li>
+          </a>
+          <a href="/reference/">
+            <li>Web DEV Tools</li>
+          </a>
+          <a href="html-img.html">
+            <li>Web DEV Community</li>
+          </a>
+          <a href="html-img.html">
+            <li>Web DEV Learning</li>
+          </a>
+          <a href="install-vs-code.html">
+            <li>Code Editor</li>
+          </a>
+          <a href="/about.html">
+            <li>About Us</li>
+          </a>
+          <br /><br /><br />
+        </ul>
+      </div>
+      <article class="article">
+        <h1 id="hr">More HTML Tags!</h1>
+        <h3 class="author">By Tony <span class="date">2023.2.19</span></h3>
+        <hr />
+        <p>
+          We already introduced &lth1&gt tags on the
+          <a href="what-is-html.html">previous article</a>. Here are some more
+          HTML tags! You can open up VS Code and follow along.
+        </p>
+        <h2>1. The basic tags</h2>
+        <p>
+          All the tags below are indispensable, they formed the basic structure
+          of a webpage.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Tag name</th>
+              <th>Usage</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>&lt!DOCTYPE html&gt</td>
+            <td>
+              It tells the browser the document language is HTML and doesn't
+              have a close tag.
+            </td>
+          </tr>
+          <tr>
+            <td>&lthtml&gt &lt/html&gt</td>
+            <td>
+              These tags are matching tags. They wrap up<br />&lthead&gt
+              &lt/head&gt and &ltbody&gt &lt/body&gt
+            </td>
+          </tr>
+          <tr>
+            <td>&lthead&gt &lt/head&gt</td>
+            <td>
+              These tags wrap up all the information that is not included in
+              &ltbody&gt &lt/body&gt tags.
+            </td>
+          </tr>
+          <tr>
+            <td>&ltbody&gt &lt/body&gt</td>
+            <td>
+              These tags have the same level as head tags. They wrap up all the
+              contents that are visible on the page.
+            </td>
+          </tr>
+          <tr>
+            <td>&lttitle&gt &lt/title&gt</td>
+            <td>
+              These tags are wrapped inside head tags. The text inside them will
+              show on the page title of the browser.
+            </td>
+          </tr>
+        </table>
+        <p>
+          You can type all the tags above by creating a new HTML file in VS Code
+          and type "!" then hit enter. All the tags should appear like this:
+        </p>
+        <img
+          src="/images/coding9.png"
+          alt="Tags"
+          style="width: 88%; margin-inline: 6%"
+        />
+        <p>
+          You can change anything and see what happens. The best way to learn is
+          by doing it <i>yourself</i>.
+        </p>
+
+        <h2>2. Other common tags</h2>
+        <p>
+          All the tags below are very common and important. It's always good to
+          try to remember them.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Tag name</th>
+              <th>Usage</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>&lth1&gt &lt/h1&gt~&lth6&gt &lt/h6&gt</td>
+            <td>
+              There are six levels of heading tags. &lth1&gt is the largest
+              heading, and &lth6&gt is the smallest heading.
+            </td>
+          </tr>
+          <tr>
+            <td>&ltp&gt &lt/p&gt</td>
+            <td>The text inside them is marked as a paragraph.</td>
+          </tr>
+          <tr>
+            <td>&ltdiv&gt &lt/div&gt</td>
+            <td>
+              They wrap up and seperate contents. With these tags, it's easier
+              to control and organize different sections.
+            </td>
+          </tr>
+          <tr>
+            <td>&lta&gt &lt/a&gt</td>
+            <td>They make elements inside them clickable hyperlink.</td>
+          </tr>
+
+          <tr>
+            <td>&ltstyle&gt &lt/style&gt</td>
+            <td>
+              You can put CSS style sheets in these tags.
+              <a
+                href="what-is-css.html"
+                style="font-size: 14px; font-weight: bold"
+                ><u>What's CSS?</u></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>&ltb&gt &lt/b&gt</td>
+            <td>The text inside these tags is bold.</td>
+          </tr>
+          <tr>
+            <td>&ltscript&gt &lt/script&gt</td>
+            <td>
+              These tags allow you to put JavaScript code inside an HTML file.
+              <a
+                href="what-is-javascript.html"
+                style="font-size: 14px; font-weight: bold"
+                ><u>What's JavaScript?</u></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>&ltul&gt &lt/ul&gt</td>
+            <td>These tags wrap up an unordered list.</td>
+          </tr>
+          <tr>
+            <td>&ltol&gt &lt/ol&gt</td>
+            <td>These tags wrap up a number-ordered list.</td>
+          </tr>
+          <tr>
+            <td>&ltli&gt &lt/li&gt</td>
+            <td>
+              These tags wrap up a list item and are wrapped inside &ltul&gt
+              &lt/ul&gt or &ltol&gt &lt/ol&gt tags.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="/reference/tags/hr-tag.html"
+                title="More information about this tag."
+                >&lthr&gt</a
+              >
+            </td>
+            <td>
+              A line that seperates sections.
+              <a href="#hr">The colored line here</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="/reference/tags/br-tag.html"
+                title="More information about this tag."
+                >&ltbr&gt</a
+              >
+            </td>
+            <td>It makes a new line in a paragraph<br />like<br />this.</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="/reference/tags/img-tag.html"
+                title="More information about this tag."
+                >&ltimg&gt</a
+              >
+            </td>
+            <td>It grabs an image by it's name and shows the image.</td>
+          </tr>
+        </table>
+        <p>
+          Take some time and try to make an interesting webpage using the tags
+          introduced above! If you are not sure how to use a tag, just click it
+          for more information. Have fun exploring HTML tags!
+        </p>
+        <div class="buttons">
+          <button id="prevButton" class="button">◀ Previous</button>
+          <button id="myButton" class="button">Next ▶</button>
+          <script>
+            document
+              .getElementById("myButton")
+              .addEventListener("click", function () {
+                window.location.href = "html-basic-structure.html";
+              });
+            document
+              .getElementById("prevButton")
+              .addEventListener("click", function () {
+                window.location.href = "what-is-html.html";
+              });
+          </script>
+        </div>
+      </article>
+      <footer class="footer">
+        <div>
+          ©️ <span id="year">2023</span>
+          <a href="/" style="text-decoration: underline; color: white"
+            >MacWeb</a
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>What Is Coding? | MacCode</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+  </head>
+  <div>
+    <nav class="nav">
+      <a href="/maccode/" class="logo">
+        <img src="/maccode/logo.png" alt="MacWeb Logo" />
+      </a>
+      <a href="/maccode/html/" class="nav-link">HTML</a>
+      <a href="/maccode/css/" class="nav-link">CSS</a>
+      <a href="/maccode/js/" class="nav-link">JavaScript</a>
+      <a href="/maccode/references/" class="nav-link">Refrences</a>
+      <a href="/maccode/about.html" class="nav-link">About</a>
+    </nav>
+    <div>
+      <div class="wrapper side-wrapper">
+        <div class="sidebar side">
+          <ul style="list-style-type: none">
+            <h2>HTML Basics</h2>
+            <a
+              href="What-is-coding.html"
+              style="font-weight: bold; color: gold"
+            >
+              <li>What Is Coding?</li>
+            </a>
+            <a href="what-is-html.html">
+              <li>What Is HTML?</li>
+            </a>
+            <a href="more-html-tags.html">
+              <li>More HTML Tags!</li>
+            </a>
+            <a href="html-basic-structure.html">
+              <li>HTML Basic Structure</li>
+            </a>
+            <a href="html-article.html">
+              <li>HTML Article Structure</li>
+            </a>
+            <a href="html-img.html">
+              <li>HTML Image</li>
+            </a>
+            <a href="html-hyperlink.html">
+              <li>HTML Hyperlink</li>
+            </a>
+            <a href="html-list.html">
+              <li>HTML List</li>
+            </a>
+            <a href="html-formatting.html">
+              <li>HTML Formatting</li>
+            </a>
+            <a href="html-attributes.html">
+              <li>HTML Attributes</li>
+            </a>
+            <a href="beginner-quiz.html">
+              <li>Unit Quiz</li>
+            </a>
+            <br />
+            <h2>HTML Advanced</h2>
+
+            <a href="html-forms.html">
+              <li>HTML Forms</li>
+            </a>
+            <a href="html-semantics.html">
+              <li>HTML Semantics</li>
+            </a>
+            <a href="html-special-characters.html">
+              <li>HTML Special Characters</li>
+            </a>
+            <a href="html-tables.html">
+              <li>HTML Tables</li>
+            </a>
+            <a href="html-multimedia.html">
+              <li>HTML Multimedia</li>
+            </a>
+            <a href="html-meta.html">
+              <li>HTML Meta Tag</li>
+            </a>
+            <a href="html-embed.html">
+              <li>HTML Embed</li>
+            </a>
+            <a href="html-canvas.html">
+              <li>HTML Canvas</li>
+            </a>
+            <a href="html-api.html">
+              <li>HTML API</li>
+            </a>
+            <a href="html-svg.html">
+              <li>HTML SVG</li>
+            </a>
+            <a href="advanced-quiz.html">
+              <li>Unit Quiz</li>
+            </a>
+            <br />
+            <h2>Other</h2>
+            <a href="/reference/tags/">
+              <li>HTML Tag Reference</li>
+            </a>
+            <a href="/reference/tags/">
+              <li>HTML Attribute Reference</li>
+            </a>
+            <a href="more-html-tags.html">
+              <li>Web Developer</li>
+            </a>
+            <a href="html-article.html">
+              <li>Web DEV Reference</li>
+            </a>
+            <a href="/reference/">
+              <li>Web DEV Tools</li>
+            </a>
+            <a href="html-img.html">
+              <li>Web DEV Community</li>
+            </a>
+            <a href="html-img.html">
+              <li>Web DEV Learning</li>
+            </a>
+            <a href="install-vs-code.html">
+              <li>Code Editor</li>
+            </a>
+            <a href="/about.html">
+              <li>About Us</li>
+            </a>
+            <br /><br />
+          </ul>
+        </div>
+        <article class="article">
+          <h1>What is coding?</h1>
+          <h3 class="author">By Tony <span class="date">2023.2.11</span></h3>
+          <hr />
+          <p>
+            Coding, or <i>programming</i>, is a skill that makes you control
+            computers and tell them what you want them to do. (This website is
+            made by lines of code, too!)
+          </p>
+          <p>
+            There are many different programming languages, each specified for
+            different tasks. Here are some for web development: <br />
+          </p>
+          <ul>
+            <li>
+              <strong> HTML</strong> (Hyper Text Markup Language) can make a
+              website's contents and structures.
+            </li>
+            <li>
+              <strong> CSS</strong> (Cascading Style Sheets) can make a website
+              look better
+            </li>
+            <li>
+              <strong> JavaScript</strong> can make a website calculate things,
+              respond to users, and other "smart" things
+            </li>
+          </ul>
+          <img src="/images/coding1.jpg" alt="Coding Image" />
+          <figcaption>An example of some HTML markup code.</figcaption>
+          <p>
+            Coding can improve your logical thinking skill. Having a clear,
+            logical, and understandable structure of codes is really important.
+          </p>
+          <p>
+            It also trains your patience. You <i>will</i> experience bugs very
+            often. Having a patience to debug again and again and review your
+            code again and again is also important.
+          </p>
+          <p>
+            <strong>Summary:</strong><br />Coding is a very important skill to
+            learn in the 21 st century. People code to control computers to do
+            diffrent things. There are different kinds of coding language, each
+            specified on different tasks.
+          </p>
+          <div class="buttons">
+            <button id="prevButton" class="button">◀ Previous</button>
+            <button id="nextButton" class="button">Next ▶</button>
+            <script>
+              document
+                .getElementById("nextButton")
+                .addEventListener("click", function () {
+                  window.location.href = "what-is-html.html";
+                });
+              document
+                .getElementById("prevButton")
+                .addEventListener("click", function () {
+                  window.location.href = "/courses/";
+                });
+            </script>
+          </div>
+        </article>
+        <footer class="footer">
+          <div>
+            ©️ <span id="year">2023</span>
+            <a href="/" style="text-decoration: underline; color: white"
+              >MacWeb</a
+            >
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+</html>
