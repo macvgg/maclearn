@@ -1,5 +1,4 @@
-const button = document.getElementById("run");
-button.addEventListener("click", runCode);
+setInterval(runCode,1000);
 
 function runCode() {
   var html = document.getElementById("html").value;
@@ -7,6 +6,6 @@ function runCode() {
   var js = document.getElementById("js").value;
   var output = document.getElementById("output").contentWindow.document;
   output.open();
-  output.writeln(html+"<style>"+css+"* {margin:8px; word-wrap:break-word; white-space:pre-wrap;} html {margin:0px;}"+"</style>"+"<script>"+js+"</script>");
+  output.writeln("<style>"+css+"* {margin:8px; word-wrap:break-word; white-space:pre-wrap;} html {margin:0px;}"+"</style>" + "<body>" + html + "<script>"+js+"</script>" + "</body>");
   output.close();
 }

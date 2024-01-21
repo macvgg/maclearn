@@ -339,7 +339,7 @@ p code {
 }
 
 .side {
-  height: 91.5vh;
+  height: calc(100vh - 46.6px);
   overflow: auto;
   position: fixed;
 }

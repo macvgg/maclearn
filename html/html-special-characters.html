@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HTML Special Characters | MacCode</title>
+  <title>HTML Special Characters | MacLearn</title>
   <link href="style2.css" rel="stylesheet">
   <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
 </head>
 <body>
   <nav class="nav">
-    <a href="/maccode/" class="logo">
-      <img src="/maccode/logo.png" alt="MacWeb Logo" />
+    <a href="/maclearn/" class="logo">
+      <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
     </a>
-    <a href="/maccode/html/" class="nav-link">HTML</a>
-    <a href="/maccode/css/" class="nav-link">CSS</a>
-    <a href="/maccode/js/" class="nav-link">JavaScript</a>
-    <a href="/maccode/references/" class="nav-link">Refrences</a>
-    <a href="/maccode/about.html" class="nav-link">About</a>
+    <a href="/maclearn/html/" class="nav-link">HTML</a>
+    <a href="/maclearn/css/" class="nav-link">CSS</a>
+    <a href="/maclearn/js/" class="nav-link">JavaScript</a>
+    <a href="/maclearn/references/" class="nav-link">Refrences</a>
+    <a href="/maclearn/about.html" class="nav-link">About</a>
   </nav>
   <div class="wrapper side-wrapper">
     <div class="sidebar side">
@@ -91,10 +91,10 @@
         </a>
         <br>
         <h2>Other</h2>
-          <a href="/maccode/references/tags/a-tags.html">
+          <a href="/maclearn/references/tags/a-tags.html">
             <li>HTML Tag Reference</li>
           </a>
-          <a href="/maccode/references/attributes/">
+          <a href="/maclearn/references/attributes/">
             <li>HTML Attribute Reference</li>
           </a>
           <a href="">
@@ -112,10 +112,10 @@
           <a href="">
             <li>Web DEV Learning</li>
           </a>
-          <a href="/maccode/references/development/install-vs-code.html">
+          <a href="/maclearn/references/development/install-vs-code.html">
             <li>Code Editor</li>
           </a>
-          <a href="/maccode/about.html">
+          <a href="/maclearn/about.html">
             <li>About Us</li>
           </a>
         <br><br><br>
@@ -138,7 +138,7 @@
       <span style="color: transparent;">ww</span>&ltli&gtDouble quote: &#38#34;&lt/li&gt<br>
       <span style="color: transparent;">ww</span>&ltli&gtSingle quote: &#38#39;&lt/li&gt<br>
       <span style="color: transparent;">ww</span>&ltli&gtSemicolon : &#38#59;&lt/li&gt<br>
-      <span style="color: transparent;">ww</span>&ltli&gtCopyright : &#38#copy;&lt/li&gt<br>
+      <span style="color: transparent;">ww</span>&ltli&gtCopyright : &#38copy;&lt/li&gt<br>
       <span style="color: transparent;">ww</span>&ltli&gtA random symbol : &#38#3348;&lt/li&gt<br>
       <span style="color: transparent;">ww</span>&ltli&gtThe first numbered entity: &#38#33;&lt/li&gt<br>
       <span style="color: transparent;">ww</span>&ltli&gtThe last: &#38#55203;&lt/li&gt<br>
@@ -162,7 +162,7 @@
 <li>Double quote: &#34;</li>
 <li>Single quote: &#39;</li>
 <li>Semicolon : &#59;</li>
-<li>Copyright : &#copy;</li>
+<li>Copyright : &copy;</li>
 <li>A random symbol : &#3348;</li>
 <li>The first numbered entity: &#33;</li>
 <li>The last: &#55203;</li>
@@ -232,20 +232,12 @@
     <div class="buttons">
       <button id="prevButton" class="button">◀ Previous</button>
       <button id="myButton" class="button">Next ▶</button>
-      <script>
-      document.getElementById("myButton").addEventListener("click", function() {
-        window.location.href = "html-tables.html";
-        });
-        document.getElementById("prevButton").addEventListener("click", function() {
-        window.location.href = "html-semantics.html";
-        });
-</script>
 
     </div>
   </article>
   <footer class="footer">
     <div>
-      ©️ <span id="year">2023</span>
+      © <span id="year">2022</span>
       <a
         href="/" target="_blank"
         style="text-decoration: underline; color: white"
@@ -255,5 +247,15 @@
   </footer>
   </div>
   
+  <script>
+    document.getElementById("myButton").addEventListener("click", function() {
+      window.location.href = "html-tables.html";
+      });
+      document.getElementById("prevButton").addEventListener("click", function() {
+      window.location.href = "html-semantics.html";
+      });
+      let d = new Date;
+      document.getElementById("year").innerHTML = d.getFullYear();
+</script>
 </body>
 </html>

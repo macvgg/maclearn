@@ -1,13 +1,17 @@
-const annoucement = document.getElementById("annoucement");
-const close = document.getElementById("close");
-const newbtn = document.getElementById("new");
-annoucement.classList.remove("not-appear");
+document.addEventListener("DOMContentLoaded", function () {
+  const wrap = document.getElementById("wrap");
+  const bar = document.getElementById("sidebar");
+  document.addEventListener("mousemove", function (event) {
+    if (event.clientX <= 5 && bar.classList.contains("movingbar") !== true) {
+      bar.classList.add("movingbar");
+    }
+  });
 
-function notappear() {
-  annoucement.classList.add("not-appear");
-}
+  document.addEventListener("click", function () {
+    bar.classList.remove("movingbar");
+  })
 
-close.addEventListener("click",notappear);
-setInterval(function(){
-  newbtn.classList.toggle("new-effect");
-},500)
+  wrap.addEventListener("click", function () {
+    console.log("sl");
+  });
+});
