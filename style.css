@@ -115,6 +115,73 @@ h2 {
   margin-block: 20px;
 }
 
+
+.select {
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 18px;
+  border-bottom: 2px solid black;
+  font-weight: bold;
+  appearance: none;
+  padding-block: 12px;
+  padding-inline: 20px;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+#cats {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 35px;
+  width: 140px;
+  border-radius: 0px 0px 10px 10px;
+  background-color: black;
+  padding-bottom: 10px;
+  transition: display 0.3s ease;
+}
+
+.select:hover #cats {
+  display: flex;
+  box-shadow: 0px 10px 15px rgb(60, 60, 60);
+}
+
+#cats a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding-block: 10px;
+  font-size: 18px;
+  position: relative;
+}
+
+#cats a::after {
+  content: "";
+  height: 2px;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0px;
+  margin: 0;
+  background-color: gold;
+  transition: width 0.15s ease;
+}
+
+#cats a:hover::after {
+  width: 50%;
+  background-color: gold;
+  transition: width 0.2s ease;
+}
+
+
+
 .logo {
   margin-inline: 35px;
   height: 32px;
@@ -211,7 +278,6 @@ h2 {
   padding-block: 15px;
   line-height: 28px;
   font-size: 15px;
-  margin-top: 40px;
 }
 
 .footer a {
@@ -419,10 +485,96 @@ hr {
   width: 50%;
 }
 
+.announce {
+  background-color: rgb(30, 30, 30);
+  position: sticky;
+  padding-block: 10px;
+  top: 46.5px;
+  z-index: 10;
+}
+
+.containers {
+  width: 100%;
+  background-image: url(images/coding1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.wrap {
+  width: 100%;
+  padding-block: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+.card {
+  background-color: rgba(70, 70, 70, 0.5);
+  width: 300px;
+  border-radius: 10px;
+  height: 320px;
+  margin-block: 20px;
+  margin-inline: 30px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgb(100, 100, 100);
+  backdrop-filter: blur(5px);
+}
+
+.card img {
+ height: 45%;
+ margin: auto;
+ border-radius: 10px;
+}
+
+.title {
+  color: white;
+  margin-block: 0;
+  margin-bottom: 10px;
+  padding-block: 0;
+  font-size: 25px;
+}
+
+.des {
+  color: white;
+  font-size: 18px;
+  line-height: 25.6px;
+}
+
+#closea {
+  float: right;
+  width: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-right: 30px;
+}
+
+#closea:hover {
+  transform: rotate(-90deg);
+}
+
+.announce h2 {
+  font-size: 18px;
+  text-align: left;
+  padding-left: 30px;
+  margin-block: 0;
+}
+
+.announce a {
+  color: white;
+}
+
 .courseimg img {
   width: 70%;
   margin-inline: 15%;
   margin-block: 6%;
+  border-radius: 10px;
 }
 
 .references {
@@ -468,4 +620,5 @@ hr {
   width: 50%;
   margin-inline: 25%;
   margin-bottom: 30px;
+  border-radius: 10px;
 }

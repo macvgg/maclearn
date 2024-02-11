@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Home | MacLearn</title>
-    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <script src="app.js"></script>
   </head>
@@ -11,12 +11,86 @@
       <a href="/maclearn/" class="logo">
         <img src="maclearn-logo.png" alt="MacLearn Logo" />
       </a>
-      <a href="/maclearn/html/" class="nav-link">HTML</a>
-      <a href="/maclearn/css/" class="nav-link">CSS</a>
-      <a href="/maclearn/js/" class="nav-link">JavaScript</a>
-      <a href="/maclearn/references/" class="nav-link">Refrences</a>
-      <a href="/maclearn/about.html" class="nav-link">About</a>
+      <div class="select">
+        <span id="header123">Coding</span>
+        <ul id="cats">
+          <a href="/maclearn/coding/html/">HTML</a>
+          <a href="/maclearn/coding/css/">CSS</a>
+          <a href="/maclearn/coding/js/">JavaScript</a>
+          <a href="/maclearn/coding/python/">Python</a>
+          <a href="/maclearn/coding/computing/">Computing</a>
+          <a href="/maclearn/coding/references/">References</a>
+          <a href="/maclearn/coding/playground/">Playground</a>
+        </ul>
+      </div>
+      <div class="select">
+        <span id="header123">Humanity</span>
+        <ul id="cats">
+          <a href="/maclearn/humanity/art/">Art</a>
+          <a href="/maclearn/humanity/civics/">Civics</a>
+          <a href="/maclearn/humanity/economy/">Economy</a>
+          <a href="/maclearn/humanity/health/">Health</a>
+          <a href="/maclearn/humanity/history/">History</a>
+        </ul>
+      </div>
+      <div class="select">
+        <span id="header123">Languages</span>
+        <ul id="cats">
+          <a href="/maclearn/languages/english/">English</a>
+          <a href="/maclearn/languages/spanish/">Spanish</a>
+          <a href="/maclearn/languages/french/">French</a>
+          <a href="/maclearn/languages/chinese/">Chinese</a>
+          <a href="/maclearn/languages/korean/">Korean</a>
+        </ul>
+      </div>
+      <div class="select">
+        <span id="header123">Math</span>
+        <ul id="cats">
+          <a href="/maclearn/math/kindergarten/">Kindergarten</a>
+          <a href="/maclearn/math/elementary/">Elementary</a>
+          <a href="/maclearn/math/middle/">Middle School</a>
+          <a href="/maclearn/math/high/">High School</a>
+          <a href="/maclearn/math/college/">College</a>
+        </ul>
+      </div>
+      <div class="select">
+        <span id="header123">Science</span>
+        <ul id="cats">
+          <a href="/maclearn/science/biology/">Biology</a>
+          <a href="/maclearn/science/chemistry/">Chemistry</a>
+          <a href="/maclearn/science/engineering/">Engineering</a>
+          <a href="/maclearn/science/geology/">Geology</a>
+          <a href="/maclearn/science/physics/">Physics</a>
+        </ul>
+      </div>
+      <div class="select">
+        <span id="header123">Help</span>
+        <ul id="cats">
+          <a href="/macblog/projects/maclearn/">About</a>
+          <a href="/macblog/updates/maclearn/">Updates</a>
+          <a href="/macblog/projects/maclearn/">Docs</a>
+          <a href="https://forms.gle/P5QfiZFgZ3KURdbJ8" target="_blank"
+            >Feedback</a
+          >
+        </ul>
+      </div>
     </nav>
+    <div class="announce">
+      <h2>
+        Celebrate 1 year of free online education at MacLearn with the
+        <a href="/macblog/updates/maclearn/2024/anniversary.html" target="_blank"
+          >MacLearn Anniversary Update</a
+        >
+        🎉!!!
+        <img src="xmark-solid.svg" alt="Close" id="closea" />
+      </h2>
+    </div>
+    <script>
+      let clos = document.getElementById("closea");
+      if (localStorage.getItem("maclearnclose")) {
+        clos.parentElement.parentElement.style.display = "none";
+      }
+    </script>
     <div class="macsidebar" id="sidebar">
       <a href="/"><img src="/logo.png" alt="" /></a>
       <a href="/maclearn/"><img src="/MacLearn Logo.png" alt="" /></a>
@@ -28,51 +102,111 @@
       <div class="title">Welcome to MacLearn!</div>
       <div class="sub">Learn anything, for free.</div>
     </div>
-    <div class="htmlcourse">
-      <div class="coursep">
-        <h2>HTML</h2>
-        <p id="htmlp">
-          <span style="text-align: center; display: block">*Not completed*</span
-          ><br />
-          <b>Learn</b> HTML (HyperText Markup Language), one of the most
-          important programming languages to construct a website.
-        </p>
-        <a href="/maclearn/html/what-is-coding.html"><button>Start Learning</button></a>
-      </div>
-      <div class="courseimg">
-        <img src="/maclearn/images/coding1.jpg" alt="HTML" />
-      </div>
-    </div>
-    <div class="htmlcourse" style="background-color: rgb(224, 224, 224)">
-      <div class="courseimg">
-        <img src="/maclearn/images/coding11.png" alt="HTML" />
-      </div>
-      <div class="coursep">
-        <h2>CSS</h2>
-        <p id="htmlp">Coming Soon!</p>
-        <button>Coming Soon!</button>
-      </div>
-    </div>
-    <div class="htmlcourse">
-      <div class="coursep">
-        <h2>JavaScript</h2>
-        <p id="htmlp">Coming Next Year!</p>
-        <button>Coming Soon!</button>
-      </div>
-      <div class="courseimg">
-        <img src="/maclearn/images/coding1.jpg" alt="HTML" />
+    <div class="containers">
+      <div class="wrap">
+        <a href="coding/html/what-is-coding.html" class="card" data-tilt>
+          <img src="images/html.png" alt="MacWeb Logo" />
+          <h2 class="title" style="display: flex; align-items: center; justify-content: center;">HTML <span
+            style="
+              text-align: center;
+              display: inline-block;
+              background-color: black;
+              color: white;
+              width: 50px;
+              margin-left: 15px;
+              font-size: 15px;
+              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                sans-serif;
+                padding-block: 5px;
+              border-radius: 5px;
+              font-weight: bold;
+              position: absolute;
+              right: 50px;
+            "
+            >Beta</span
+          ></h2>
+          <p class="des">
+            <b>Learn</b> HTML, the language that constructs the
+            structure and content of a website.
+          </p>
+        </a>
+        <a href="" class="card" data-tilt>
+          <img src="images/css.png" alt="MacWeb Logo" />
+          <h2 class="title" style="display: flex; align-items: center; justify-content: center;">CSS <span
+            style="
+              text-align: center;
+              display: inline-block;
+              background-color: rgb(80, 80, 80);
+              color: white;
+              width: 100px;
+              margin-left: 15px;
+              font-size: 15px;
+              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                sans-serif;
+                padding-block: 5px;
+              border-radius: 5px;
+              font-weight: bold;
+              position: absolute;
+              right: 10px;
+            "
+            >Coming 2024</span
+          ></h2>
+          <p class="des">
+            <b>Master</b> CSS, the language that styles a website's looks and
+            appearance.
+          </p>
+        </a>
+        <a href="" class="card" data-tilt>
+          <img src="images/js.png" alt="MacWeb Logo" />
+          <h2 class="title" style="display: flex; align-items: center; justify-content: center;">JavaScript<br> <span
+            style="
+              text-align: center;
+              display: inline-block;
+              background-color: rgb(80, 80, 80);
+              color: white;
+              width: 83px;
+              margin-left: 15px;
+              font-size: 13px;
+              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                sans-serif;
+                padding-block: 5px;
+              border-radius: 5px;
+              font-weight: bold;
+              position: absolute;
+              right: 0px;
+            "
+            >Coming 2025</span
+          ></h2>
+          <p class="des">
+            <b>Explore</b> JavaScript, the language for all the interactivity
+            and functionailty of a website.
+          </p>
+        </a>
       </div>
     </div>
     <div class="references" style="background-color: rgb(224, 224, 224)">
       <div class="coursepr">
         <h2>References</h2>
         <p id="htmlp">
-          <span style="text-align: center; display: block">*Not completed*</span
+          <span
+            style="
+              text-align: center;
+              display: block;
+              background-color: black;
+              color: white;
+              width: 40%;
+              margin-inline: 30%;
+              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                sans-serif;
+              border-radius: 10px;
+              font-weight: bold;
+            "
+            >Beta Course</span
           ><br />
           Check out our complete reference for web development, including HTML
           tags, CSS values, JavaScript functions, developer's guide, and more!
         </p>
-        <a href="/maclearn/references/"><button>Explore now!</button></a>
+        <a href="/maclearn/coding/references/"><button>Explore now!</button></a>
       </div>
       <div class="courseimgr">
         <img src="/maclearn/images/reference/img2.jpg" alt="HTML" />
@@ -89,5 +223,6 @@
         >
       </div>
     </footer>
+    <script src="vanilla-tilt.js"></script>
   </body>
 </html>
