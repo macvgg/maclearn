@@ -4,6 +4,12 @@
     <title>HTML Semantics | MacLearn</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
+      async="async"
+    ></script>
+    <name id="page" data="html-semantics"></name>
   </head>
   <body>
     <nav class="nav">
@@ -117,7 +123,7 @@
           <a href="html-forms.html">
             <li>HTML Forms</li>
           </a>
-          <a href="html-semantics.html" style="font-weight: bold; color: gold">
+          <a href="html-semantics.html" style="font-weight: bold; color: rgb(89, 137, 227)">
             <li>HTML Semantics</li>
           </a>
           <a href="html-special-characters.html">
@@ -143,11 +149,45 @@
           </a><br /><br />
         </ul>
       </div>
+      <div class="tbar" id="tbar">
+        <h2 class="bart">HTML Semantics</h2>
+        <div class="bard">2.19.2024</div>
+      </div>
+      <script src="app.js"></script>
       <article class="article">
+        <div class="entire">
+          <div class="sharepanel">
+            <div class="sharethis-inline-share-buttons"></div>
+            <div class="copy">
+              <div class="clink" id="clink"></div>
+              <div class="cbtn" id="cbtn">Copy</div>
+            </div>
+          </div>
+        </div>
         <h1>HTML Semantics</h1>
-        <h3 class="author">By Tony <span class="date">2023.4.25</span>
-          <span style="padding-inline: 10px">•</span> Last updated
-          <span class="date">2024.1.27</span>
+        <h3 class="author">By Tony <!--<span class="date">2023.4.25</span>
+          <span style="padding-inline: 10px">•</span> Last updated-->
+          <span class="date">2.19.2024</span>
+          <div class="icons">
+            <img
+              src="/maclearn/icons/star-regular.svg"
+              alt="Favorite"
+              id="favorite"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/share-solid.svg"
+              alt="Share"
+              id="share"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/flag.svg"
+              alt="Report"
+              id="flag"
+              class="icon"
+            />
+          </div>
         </h3>
         <hr />
         <p>
@@ -158,42 +198,43 @@
           it's easier to read, understand, and control different sections. This
           is an example:
         </p>
-        <code>
-          &ltheader&gt<br />
-          <span style="color: transparent" class="space">www</span
-          >&lth1&gtHeading&lt/h1&gt<br />
-          <span style="color: transparent" class="space">www</span
-          >&ltp&gtAuthor:John Doe&lt/p&gt<br />
-          &ltheader&gt<br />
-          &ltnav&gt<br />
-          <span style="color: transparent" class="space">www</span
-          >&ltli&gtHome&lt/li&gt<br />
-          <span style="color: transparent" class="space">www</span
-          >&ltli&gtAbout&lt/li&gt<br />
-          &lt/nav&gt<br />
-          &ltarticle&gt<br />
-          <span style="color: transparent" class="space">www</span
-          >&ltsection&gt<br />
-          <span style="color: transparent" class="space">wwwwww</span
-          >&lth2&gtSection 1&lt/h2&gt<br />
-          <span style="color: transparent" class="space">wwwwww</span
-          >&ltp&gtLorem ipsum dolor sit amet.&lt/p&gt<br />
-          <span style="color: transparent" class="space">www</span
-          >&lt/section&gt<br />
-          <span style="color: transparent" class="space">www</span
-          >&ltsection&gt<br />
-          <span style="color: transparent" class="space">wwwwww</span
-          >&lth2&gtSection 2&lt/h2&gt<br />
-          <span style="color: transparent" class="space">wwwwww</span
-          >&ltp&gtRatione distinctio corrupti illo.&lt/p&gt<br />
-          <span style="color: transparent" class="space">www</span
-          >&lt/section&gt<br />
-          &lt/article&gt<br />
-          &ltfooter&gt<br />
-          <span style="color: transparent" class="space">www</span>&ltp&gtBy
-          John Doe 2023&lt/p&gt<br />
-          &lt/footer&gt
-        </code>
+        <div class="example">
+          <textarea
+            id="html"
+            class="html-example"
+            placeholder="HTML"
+          ></textarea>
+          <iframe
+            class="iframe-example"
+            id="output"
+            style="background-color: white"
+            sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
+          ></iframe>
+          <script>
+            const htmlExample = document.getElementById("html");
+            htmlExample.value = `<header>
+<h1>Heading</h1>
+<p>Author:John Doe</p>
+<header>
+<nav>
+<li>Home</li>
+<li>About</li>
+</nav>
+<article>
+<section>
+<h2>Section 1</h2>
+<p>Lorem ipsum dolor sit amet.</p>
+</section>
+<section>
+<h2>Section 2</h2>
+<p>Ratione distinctio corrupti illo.</p>
+</section>
+</article>
+<footer>
+<p>By John Doe 2023</p>
+</footer> `;
+          </script>
+        </div>
         <p>
           You may already noticed how some tags' names have English meanings like
           "header", "section", or "footer". These tags are semantic elements. We
@@ -203,14 +244,6 @@
           article, and &ltfooter&gt for footer which has additional information
           about the website. Here is the output:
         </p>
-        <img
-          src="/maclearn/images/coding12.png"
-          alt="Output"
-          style="width: 100%; margin: 0"
-        />
-        <span style="font-size: 17px"
-          ><i>Note: The output is a screenshot due to styling issues.</i></span
-        ><br /><br />
         <p>
           &ltfigure&gt and &ltfigcaption&gt are also semantic tags. They often
           appear together. The &ltfigure&gt tag is used to contain a graph,
@@ -222,8 +255,9 @@
           organized into different parts.
         </p>
         <div class="buttons">
-          <button id="prevButton" class="button">◀ Previous</button>
-          <button id="myButton" class="button">Next ▶</button>
+          
+        <button id="prevButton" class="button">Back</button>
+        <button id="myButton" class="button">Next</button>
           <script>
             document
               .getElementById("myButton")

@@ -4,6 +4,12 @@
     <title>HTML Article Structure | MacLearn</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
+      async="async"
+    ></script>
+    <name id="page" data="html-article"></name>
   </head>
   <body>
     <nav class="nav">
@@ -90,7 +96,10 @@
           <a href="html-basic-structure.html">
             <li>HTML Basic Structure</li>
           </a>
-          <a href="html-article.html" style="font-weight: bold; color: gold">
+          <a
+            href="html-article.html"
+            style="font-weight: bold; color: rgb(89, 137, 227)"
+          >
             <li>HTML Article Structure</li>
           </a>
           <a href="html-img.html">
@@ -142,12 +151,47 @@
           ><br /><br />
         </ul>
       </div>
+      <div class="tbar" id="tbar">
+        <h2 class="bart">HTML Article Structure</h2>
+        <div class="bard">2.18.2024</div>
+      </div>
+      <script src="app.js"></script>
       <article class="article">
+        <div class="entire">
+          <div class="sharepanel">
+            <div class="sharethis-inline-share-buttons"></div>
+            <div class="copy">
+              <div class="clink" id="clink"></div>
+              <div class="cbtn" id="cbtn">Copy</div>
+            </div>
+          </div>
+        </div>
         <h1>HTML Article Structure</h1>
         <h3 class="author">
-          By Tony <span class="date">2023.2.26</span>
-          <span style="padding-inline: 10px">•</span> Last updated
-          <span class="date">2024.1.25</span>
+          By Tony
+          <!--<span class="date">2023.2.26</span>
+          <span style="padding-inline: 10px">•</span> Last updated-->
+          <span class="date">2.18.2024</span>
+          <div class="icons">
+            <img
+              src="/maclearn/icons/star-regular.svg"
+              alt="Favorite"
+              id="favorite"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/share-solid.svg"
+              alt="Share"
+              id="share"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/flag.svg"
+              alt="Report"
+              id="flag"
+              class="icon"
+            />
+          </div>
         </h3>
         <hr />
         <p>
@@ -157,18 +201,26 @@
           for writing an article on your webpage. Here is an example of an
           article structure:
         </p>
-        <code>
-          &ltarticle&gt<br />
-          <span style="color: transparent">cpc</span
-          >&lth1&gtLorem&lt/h1&gt<br />
-
-          <span style="color: transparent">cpc</span>&ltp&gtLorem, ipsum dolor
-          sit amet consectetur adipisicing <br /><span
-            style="color: transparent"
-            >cpc</span
-          >elit. Praesentium repellat quia sequi sunt sint.&lt/p&gt<br />
-          &lt/article&gt
-        </code>
+        <div class="example">
+          <textarea
+            id="html"
+            class="html-example"
+            placeholder="HTML"
+          ></textarea>
+          <iframe
+            class="iframe-example"
+            id="output"
+            style="background-color: white"
+            sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
+          ></iframe>
+          <script>
+            const htmlExample = document.getElementById("html");
+            htmlExample.value = `<article>
+  <h1>A Heading</h1>
+  <p>A short paragraph.</p>
+</article> `;
+          </script>
+        </div>
         <p>
           This is a basic structure of an article. We used
           <a
@@ -196,15 +248,8 @@
             >lorem ipsum</a
           >.<br />
           At the end, we added the &lt/article&gt closing tag to close the
-          &ltarticle&gt section.<br />Here is the output (Highlighted Area):
+          &ltarticle&gt section.
         </p>
-        <article style="background-color: rgb(255, 255, 199)">
-          <h1 class="h1-example">Lorem</h1>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Praesentium repellat quia sequi sunt sint.
-          </p>
-        </article>
         <p>
           Today, we created different tags to organize an article. The
           &ltarticle&gt tags are the wrapper. They helped organize and seperate
@@ -213,8 +258,8 @@
           &ltp&gt tags are also important for paragraphs. Have fun trying them!
         </p>
         <div class="buttons">
-          <button id="prevButton" class="button">◀ Previous</button>
-          <button id="myButton" class="button">Next ▶</button>
+          <button id="prevButton" class="button">Back</button>
+          <button id="myButton" class="button">Next</button>
           <script>
             document
               .getElementById("myButton")

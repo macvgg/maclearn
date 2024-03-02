@@ -4,6 +4,12 @@
     <title>HTML Multimedia | MacLearn</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
+      async="async"
+    ></script>
+    <name id="page" data="html-multimedia"></name>
   </head>
   <body>
     <nav class="nav">
@@ -126,7 +132,10 @@
           <a href="html-tables.html">
             <li>HTML Tables</li>
           </a>
-          <a href="html-multimedia.html" style="font-weight: bold; color: gold">
+          <a
+            href="html-multimedia.html"
+            style="font-weight: bold; color: rgb(89, 137, 227)"
+          >
             <li>HTML Multimedia</li>
           </a>
           <a href="html-meta.html">
@@ -138,17 +147,51 @@
           <a href="html-svg.html">
             <li>HTML SVG</li>
           </a>
-          <a href="advanced-quiz.html">
-            <li>Unit Quiz</li> </a
+          <a href="advanced-quiz.html"> <li>Unit Quiz</li> </a
           ><br /><br />
         </ul>
       </div>
+      <div class="tbar" id="tbar">
+        <h2 class="bart">HTML Multimedia</h2>
+        <div class="bard">2.18.2024</div>
+      </div>
+      <script src="app.js"></script>
       <article class="article">
+        <div class="entire">
+          <div class="sharepanel">
+            <div class="sharethis-inline-share-buttons"></div>
+            <div class="copy">
+              <div class="clink" id="clink"></div>
+              <div class="cbtn" id="cbtn">Copy</div>
+            </div>
+          </div>
+        </div>
         <h1>HTML Multimedia</h1>
         <h3 class="author">
-          By Tony <span class="date">2023.5.26</span>
-          <span style="padding-inline: 10px">•</span> Last updated
-          <span class="date">2024.1.27</span>
+          By Tony
+          <!--<span class="date">2023.5.26</span>
+          <span style="padding-inline: 10px">•</span> Last updated-->
+          <span class="date">2.18.2024</span>
+          <div class="icons">
+            <img
+              src="/maclearn/icons/star-regular.svg"
+              alt="Favorite"
+              id="favorite"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/share-solid.svg"
+              alt="Share"
+              id="share"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/flag.svg"
+              alt="Report"
+              id="flag"
+              class="icon"
+            />
+          </div>
         </h3>
         <hr />
         <p>
@@ -157,21 +200,43 @@
           elements are dynamic and they make a webpage more interesting and easy
           to visualize and understand.
         </p>
-        <code>
-          &ltvideo width="220px" controls&gt<br />
-          <span style="color: transparent; user-select: x">ww</span>&ltsource
-          src="video.mp4" type="video/mp4"&gt<br />
-          <span style="color: transparent; user-select: x">ww</span>Your browser
-          does not support this media format.<br />
-          &lt/video&gt<br />
-          &ltaudio controls&gt<br />
-          <span style="color: transparent; user-select: x">ww</span>&ltsource
-          src="audio.mp3" type="audio/mp3"&gt<br />
-          <span style="color: transparent; user-select: x">ww</span>Your browser
-          does not support this media format.<br />
-          &lt/audio&gt<br />
-          &ltimg src="img.png" width="150px" alt="An image"&gt
-        </code>
+        <div class="example">
+          <textarea
+            id="html"
+            class="html-example"
+            placeholder="HTML"
+          ></textarea>
+          <iframe
+            class="iframe-example"
+            id="output"
+            style="background-color: white"
+            sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
+          ></iframe>
+          <script>
+            const htmlExample = document.getElementById("html");
+            htmlExample.value = `<video width="220px" controls>
+<source src="video.mp4" type="video/mp4">
+Your browser does not support this media format.
+</video>
+<audio controls>
+<source src="audio.mp3" type="audio/mp3">
+Your browser does not support this media format.
+</audio>
+<img src="img.png" width="150px" alt="An image"> `;
+          </script>
+        </div>
+        <span style="font-size: 17px"
+          ><i
+            >Note: Video downloaded
+            <a
+              href="https://www.videezy.com/technology/5654-4k-stock-video-of-typing-on-laptop"
+              target="_blank"
+              >here</a
+            >, no copyright. Audio downloaded from
+            <a href="https://ncs.io/energy" target="_blank">NCS</a>,
+            Elektronomia - Energy.</i
+          ></span
+        >
         <p>
           In the &ltvideo> tags, we added the &ltsource> tags with the src
           attribute to link and display the video. Two &ltsource> tags are used
@@ -184,31 +249,6 @@
           &ltimg&gt tag
           <a href="html-img.html">here</a>. Output of the example:
         </p>
-        <video width="220px" controls>
-          <source src="video.mp4" type="video/mp4" />
-          Your browser does not support this media format.
-        </video>
-        <audio id="audio" controls>
-          <source src="audio.mp3" type="audio/mp3" />
-          Your browser does not support this media format.
-        </audio>
-        <img style="width: 150px; margin: 0" src="image.png" alt="An image" />
-        <script>
-          let audio = document.getElementById("audio");
-          audio.volume = 0.1;
-        </script>
-        <br /><span style="font-size: 17px"
-          ><i
-            >Note: Video downloaded
-            <a
-              href="https://www.videezy.com/technology/5654-4k-stock-video-of-typing-on-laptop"
-              target="_blank"
-              >here</a
-            >, no copyright. Audio downloaded from
-            <a href="https://ncs.io/energy" target="_blank">NCS</a>,
-            Elektronomia - Energy.</i
-          ></span
-        ><br />
         <p>
           So that's all about HTML multimedia. Always remeber to put source tags
           with the src attribute that links to the source so the browser knows
@@ -217,8 +257,8 @@
         </p>
 
         <div class="buttons">
-          <button id="prevButton" class="button">◀ Previous</button>
-          <button id="myButton" class="button">Next ▶</button>
+          <button id="prevButton" class="button">Back</button>
+          <button id="myButton" class="button">Next</button>
           <script>
             document
               .getElementById("myButton")

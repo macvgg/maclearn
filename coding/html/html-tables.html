@@ -4,6 +4,12 @@
     <title>HTML Tables | MacLearn</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
+      async="async"
+    ></script>
+    <name id="page" data="html-tables"></name>
   </head>
   <body>
     <nav class="nav">
@@ -123,7 +129,7 @@
           <a href="html-special-characters.html">
             <li>HTML Special Characters</li>
           </a>
-          <a href="html-tables.html" style="font-weight: bold; color: gold">
+          <a href="html-tables.html" style="font-weight: bold; color: rgb(89, 137, 227)">
             <li>HTML Tables</li>
           </a>
           <a href="html-multimedia.html">
@@ -143,12 +149,46 @@
           ><br /><br />
         </ul>
       </div>
+      <div class="tbar" id="tbar">
+        <h2 class="bart">HTML Tables</h2>
+        <div class="bard">2.19.2024</div>
+      </div>
+      <script src="app.js"></script>
       <article class="article">
+        <div class="entire">
+          <div class="sharepanel">
+            <div class="sharethis-inline-share-buttons"></div>
+            <div class="copy">
+              <div class="clink" id="clink"></div>
+              <div class="cbtn" id="cbtn">Copy</div>
+            </div>
+          </div>
+        </div>
         <h1>HTML Tables</h1>
         <h3 class="author">
-          By Tony <span class="date">2023.5.22</span>
-          <span style="padding-inline: 10px">•</span> Last updated
-          <span class="date">2024.1.27</span>
+          By Tony <!--<span class="date">2023.5.22</span>
+          <span style="padding-inline: 10px">•</span> Last updated-->
+          <span class="date">2.19.2024</span>
+          <div class="icons">
+            <img
+              src="/maclearn/icons/star-regular.svg"
+              alt="Favorite"
+              id="favorite"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/share-solid.svg"
+              alt="Share"
+              id="share"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/flag.svg"
+              alt="Report"
+              id="flag"
+              class="icon"
+            />
+          </div>
         </h3>
         <hr />
         <p>
@@ -158,56 +198,56 @@
           to create tables in webpages. This article will guide you through how
           to do this😃
         </p>
-        <code>
-          &lttable&gt<br />
-          <span style="color: transparent; user-select: x">ww</span
-          >&ltthead&gt<br />
-          <span style="color: transparent; user-select: x">wwww</span
-          >&lttr&gt<br />
-          <span style="color: transparent; user-select: x">wwwwww</span
-          >&ltth&gtName&lt/th&gt<br />
-          <span style="color: transparent; user-select: x">wwwwww</span
-          >&ltth&gtScore&lt/th&gt<br />
-          <span style="color: transparent; user-select: x">wwww</span
-          >&lt/tr&gt<br />
-          <span style="color: transparent; user-select: x">ww</span
-          >&lt/thead&gt<br />
-
-          <span style="color: transparent; user-select: x">ww</span
-          >&lttbody&gt<br />
-          <span style="color: transparent; user-select: x">wwww</span
-          >&lttr&gt<br />
-          <span style="color: transparent; user-select: x">wwwwww</span
-          >&lttd&gtTony&lt/td&gt<br />
-          <span style="color: transparent; user-select: x">wwwwww</span
-          >&lttd&gt95&lt/td&gt<br />
-          <span style="color: transparent; user-select: x">wwww</span
-          >&lt/tr&gt<br />
-          <span style="color: transparent; user-select: x">wwww</span
-          >&lttr&gt<br />
-          <span style="color: transparent; user-select: x">wwwwww</span
-          >&lttd&gtKyle&lt/td&gt<br />
-          <span style="color: transparent; user-select: x">wwwwww</span
-          >&lttd&gt85&lt/td&gt<br />
-          <span style="color: transparent; user-select: x">wwww</span
-          >&lt/tr&gt<br />
-          <span style="color: transparent; user-select: x">ww</span
-          >&lt/tbody&gt<br />
-          <span style="color: transparent; user-select: x">ww</span
-          >&lttfoot&gt<br />
-          <span style="color: transparent; user-select: x">wwww</span
-          >&lttr&gt<br />
-          <span style="color: transparent; user-select: x">wwwwww</span
-          >&lttd&gtAverage&lt/th&gt<br />
-          <span style="color: transparent; user-select: x">wwwwww</span
-          >&lttd&gt90&lt/th&gt<br />
-          <span style="color: transparent; user-select: x">wwww</span
-          >&lt/tr&gt<br />
-          <span style="color: transparent; user-select: x">ww</span
-          >&lt/tfoot&gt<br />
-          &lt/table&gt
-        </code>
-
+        <div class="example">
+          <textarea
+            id="html"
+            class="html-example"
+            placeholder="HTML"
+          ></textarea>
+          <iframe
+            class="iframe-example"
+            id="output"
+            style="background-color: white"
+            sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
+          ></iframe>
+          <script>
+            const htmlExample = document.getElementById("html");
+            htmlExample.value = `<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tony</td>
+<td>95</td>
+</tr>
+<tr>
+<td>Kyle</td>
+<td>85</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td>Average</th>
+<td>90</th>
+</tr>
+</tfoot>
+</table>
+<style>
+th, td {
+  border: 1px solid black;
+}
+</style> `;
+          </script>
+        </div>
+        <span style="font-size: 17px"
+          >Note: We added <i>border: 1px solid black;</i> to th and td so the
+          table has borders. Add <i>border-collapse: collapse;</i> to the table
+          tag to make the borders collapse.</span
+        >
         <img
           style="width: 80%; margin-top: 20px; margin-inline: 10%"
           src="/maclearn/images/coding13.png"
@@ -221,43 +261,7 @@
           tags. &lttbody&gt contains the actual data of the table, and
           &lttfoot&gt contains summary information. Each data cell in both
           &lttbody&gt and &lttfoot&gt sections is enclosed by the &lttd&gt tags.
-          Here's the output of the example above:
         </p>
-        <style>
-          td,
-          th {
-            border: 1px solid black;
-          }
-        </style>
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Score</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Tony</td>
-              <td>95</td>
-            </tr>
-            <tr>
-              <td>Kyle</td>
-              <td>85</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td>Average</td>
-              <td>90</td>
-            </tr>
-          </tfoot>
-        </table>
-        <br /><span style="font-size: 17px"
-          >Note: We added <i>border: 1px solid black;</i> to th and td so the
-          table has borders. Add <i>border-collapse: collapse;</i> to the table
-          tag to make the borders collapse.</span
-        ><br />
         <p>
           So the above information is the neccesary steps of creating HTML
           tables. Yeah, it's a bit confusing, but practice makes perfect. As
@@ -267,8 +271,9 @@
           <a href="/maclearn/coding/references/tags/creating-tables.html">reference</a>.
         </p>
         <div class="buttons">
-          <button id="prevButton" class="button">◀ Previous</button>
-          <button id="myButton" class="button">Next ▶</button>
+          
+        <button id="prevButton" class="button">Back</button>
+        <button id="myButton" class="button">Next</button>
           <script>
             document
               .getElementById("myButton")

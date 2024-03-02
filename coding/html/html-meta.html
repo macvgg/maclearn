@@ -4,6 +4,12 @@
     <title>HTML Meta Tag | MacLearn</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
+      async="async"
+    ></script>
+    <name id="page" data="html-meta"></name>
   </head>
   <body>
     <nav class="nav">
@@ -129,7 +135,7 @@
           <a href="html-multimedia.html">
             <li>HTML Multimedia</li>
           </a>
-          <a href="html-meta.html" style="font-weight: bold; color: gold">
+          <a href="html-meta.html" style="font-weight: bold; color: rgb(89, 137, 227)">
             <li>HTML Meta Tag</li>
           </a>
           <a href="html-embed.html">
@@ -143,28 +149,77 @@
           </a><br /><br />
         </ul>
       </div>
+      <div class="tbar" id="tbar">
+        <h2 class="bart">HTML Meta Tag</h2>
+        <div class="bard">2.19.2024</div>
+      </div>
+      <script src="app.js"></script>
       <article class="article">
+        <div class="entire">
+          <div class="sharepanel">
+            <div class="sharethis-inline-share-buttons"></div>
+            <div class="copy">
+              <div class="clink" id="clink"></div>
+              <div class="cbtn" id="cbtn">Copy</div>
+            </div>
+          </div>
+        </div>
         <h1>HTML Meta Tag</h1>
-        <h3 class="author">By Tony <span class="date">2023.11.29</span>
-          <span style="padding-inline: 10px">•</span> Last updated
-          <span class="date">2024.1.30</span>
+        <h3 class="author">By Tony <!--<span class="date">2023.11.29</span>
+          <span style="padding-inline: 10px">•</span> Last updated-->
+          <span class="date">2.19.2024</span>
+          <div class="icons">
+            <img
+              src="/maclearn/icons/star-regular.svg"
+              alt="Favorite"
+              id="favorite"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/share-solid.svg"
+              alt="Share"
+              id="share"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/flag.svg"
+              alt="Report"
+              id="flag"
+              class="icon"
+            />
+          </div>
         </h3>
         <hr />
         <p>How are users supposed to get to your website if they can't even find it? Meta tags provide additional information, or metadata, to the browser, search engine, and other machines. They make your website show up on the search engine, they also show additional information, description, and image for the website in social media posts, messages, and more.</p>
-        <code>
-          &ltmeta charset="UTP-8"&gt<br />
-          &ltmeta name="description" content="Free coding tutorials!"&gt<br />
-          &ltmeta name="author" content="MacWeb"&gt<br />
-          &ltmeta name="keywords" content="Coding, Web Developement, MacWeb"&gt<br />
-          &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt<br />
-        </code>
+        <div class="example">
+          <textarea
+            id="html"
+            class="html-example"
+            placeholder="HTML"
+          ></textarea>
+          <iframe
+            class="iframe-example"
+            id="output"
+            style="background-color: white"
+            sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
+          ></iframe>
+          <script>
+            const htmlExample = document.getElementById("html");
+            htmlExample.value = `<meta charset="UTP-8">
+<meta name="description" content="Free coding tutorials!">
+<meta name="author" content="MacWeb">
+<meta name="keywords" content="Coding, Web Developement, MacWeb">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">`;
+          </script>
+        </div>
         <p>
           There are 5 different meta tags in the above example. The first one, charset meta tag, tells the browser this webpage's character set is UTF-8, so the browser can display the unicode characters correctly. The second one, description meta tag, has the description as the name attribute and the actual description of the page within the content attribute. The same rule applies to the author and the keywords metatags. Last but not least, the viewport meta tag tells the browser how to display the web page on different sizes of screens, so the page is always optimized and doesn't look bad no matter what the device is. The code example doesn't have an output because all meta tags are located in the head tags, where information isn't visible. 
         </p>
         <p>In conclusion, meta tags provide the browser more information about the page so users can browse it better. They also provide search engine bots a short description about the page to help them index it, so your page can actually show up when using a search engine to search your site. Other than that, there are still more uses of meta tags on a web page, so remember to check out our references or other resources for more info!</p>
         <div class="buttons">
-          <button id="prevButton" class="button">◀ Previous</button>
-          <button id="myButton" class="button">Next ▶</button>
+          
+        <button id="prevButton" class="button">Back</button>
+        <button id="myButton" class="button">Next</button>
           <script>
             document
               .getElementById("myButton")

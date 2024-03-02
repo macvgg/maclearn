@@ -4,6 +4,12 @@
     <title>HTML SVG | MacLearn</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
+      async="async"
+    ></script>
+    <name id="page" data="html-svg"></name>
   </head>
   <body>
     <nav class="nav">
@@ -135,19 +141,57 @@
           <a href="html-embed.html">
             <li>HTML Embed</li>
           </a>
-          <a href="html-svg.html" style="font-weight: bold; color: gold">
+          <a
+            href="html-svg.html"
+            style="font-weight: bold; color: rgb(89, 137, 227)"
+          >
             <li>HTML SVG</li>
           </a>
           <a href="advanced-quiz.html"> <li>Unit Quiz</li> </a
           ><br /><br />
         </ul>
       </div>
+      <div class="tbar" id="tbar">
+        <h2 class="bart">HTML SVG</h2>
+        <div class="bard">2.19.2024</div>
+      </div>
+      <script src="app.js"></script>
       <article class="article">
+        <div class="entire">
+          <div class="sharepanel">
+            <div class="sharethis-inline-share-buttons"></div>
+            <div class="copy">
+              <div class="clink" id="clink"></div>
+              <div class="cbtn" id="cbtn">Copy</div>
+            </div>
+          </div>
+        </div>
         <h1>HTML SVG</h1>
         <h3 class="author">
-          By Tony <span class="date">2024.1.29</span>
-          <span style="padding-inline: 10px">•</span> Last updated
-          <span class="date">2024.1.29</span>
+          By Tony
+          <!--<span class="date">2024.1.29</span>
+          <span style="padding-inline: 10px">•</span> Last updated-->
+          <span class="date">2.19.2024</span>
+          <div class="icons">
+            <img
+              src="/maclearn/icons/star-regular.svg"
+              alt="Favorite"
+              id="favorite"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/share-solid.svg"
+              alt="Share"
+              id="share"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/flag.svg"
+              alt="Report"
+              id="flag"
+              class="icon"
+            />
+          </div>
         </h3>
         <hr />
         <p>
@@ -158,17 +202,34 @@
           when scaling and it's responsive, and it also has many other benefits
           like animations, small file size, and customization.
         </p>
-        <code>
-          &lt;img src="icon.svg" alt="Icon"&gt;<br />
-          &lt;svg height="200px" width="200px"&gt;<br />
-          <span style="color: transparent">cpc</span>&lt;rect height="200px"
-          width="200px" fill="blue" rx="20" /&gt;<br />
-          <span style="color: transparent">cpc</span>&lt;circle r="80" cx="100"
-          cy="100" fill="yellow" /&gt;<br />
-          <span style="color: transparent">cpc</span>&lt;text fill="black"
-          font-size="45" x="55" y="115"&gt;SVG&lt;/text&gt;<br />
-          &lt;/svg&gt;
-        </code>
+        <div class="example">
+          <textarea
+            id="html"
+            class="html-example"
+            placeholder="HTML"
+          ></textarea>
+          <iframe
+            class="iframe-example"
+            id="output"
+            style="background-color: white"
+            sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
+          ></iframe>
+          <script>
+            const htmlExample = document.getElementById("html");
+            htmlExample.value = `<img src="icon.svg" alt="Icon">
+<svg height="200px" width="200px">
+cpc<rect height="200px" width="200px" fill="blue" rx="20" />
+cpc<circle r="80" cx="100" cy="100" fill="yellow" />
+cpc<text fill="black" font-size="45" x="55" y="115">SVG</text>
+</svg> `;
+          </script>
+        </div>
+        <span style="font-size: 17px"
+          ><i
+            >Note: There isn't a file called "icon.svg" as in the example, so it
+            shows the alternative text.</i
+          ></span
+        ><br />
         <p>
           In the above example, we introduced 4 new tags: &ltsvg&gt, &ltrect&gt,
           &ltcircle&gt, and &lttext&gt, along with an &ltimg&gt tag, and several
@@ -207,20 +268,6 @@
             example above.
           </li>
         </ul>
-        <p>Here's the output of the example:</p>
-        <img src="icon.svg" alt="Icon" />
-        <svg height="200px" width="200px">
-          <rect height="200px" width="200px" fill="blue" rx="20" />
-          <circle r="80" cx="100" cy="100" fill="yellow" />
-          <text fill="black" font-size="45" x="55" y="115">SVG</text>
-        </svg>
-        <br />
-        <br /><span style="font-size: 17px"
-          ><i
-            >Note: There isn't a file called "icon.svg" as in the example, so it
-            shows the alternative text.</i
-          ></span
-        ><br />
         <p>
           Note that this is just a very little portion of SVG introduced. Except
           for &ltrect&gt, &ltcircle&gt, and &lttext&gt, there are still tons of
@@ -233,8 +280,8 @@
           flexibility and control over the codes.
         </p>
         <div class="buttons">
-          <button id="prevButton" class="button">◀ Previous</button>
-          <button id="myButton" class="button">Next ▶</button>
+          <button id="prevButton" class="button">Back</button>
+          <button id="myButton" class="button">Next</button>
           <script>
             document
               .getElementById("myButton")

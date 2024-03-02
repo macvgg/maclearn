@@ -4,6 +4,12 @@
     <title>More HTML Tags! | MacLearn</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
+      async="async"
+    ></script>
+    <name id="page" data="html-tags"></name>
   </head>
   <body>
     <nav class="nav">
@@ -84,7 +90,7 @@
           <a href="what-is-html.html">
             <li>What Is HTML?</li>
           </a>
-          <a href="more-html-tags.html" style="font-weight: bold; color: gold">
+          <a href="more-html-tags.html" style="font-weight: bold; color: rgb(89, 137, 227)">
             <li>More HTML Tags!</li>
           </a>
           <a href="html-basic-structure.html">
@@ -142,12 +148,46 @@
           ><br /><br />
         </ul>
       </div>
+      <div class="tbar" id="tbar">
+        <h2 class="bart">More HTML Tags</h2>
+        <div class="bard">2.19.2024</div>
+      </div>
+      <script src="app.js"></script>
       <article class="article">
+        <div class="entire">
+          <div class="sharepanel">
+            <div class="sharethis-inline-share-buttons"></div>
+            <div class="copy">
+              <div class="clink" id="clink"></div>
+              <div class="cbtn" id="cbtn">Copy</div>
+            </div>
+          </div>
+        </div>
         <h1 id="hr">More HTML Tags!</h1>
         <h3 class="author">
-          By Tony <span class="date">2023.2.19</span>
-          <span style="padding-inline: 10px">•</span> Last updated
-          <span class="date">2024.1.27</span>
+          By Tony <!--<span class="date">2023.2.19</span>
+          <span style="padding-inline: 10px">•</span> Last updated-->
+          <span class="date">2.19.2024</span>
+          <div class="icons">
+            <img
+              src="/maclearn/icons/star-regular.svg"
+              alt="Favorite"
+              id="favorite"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/share-solid.svg"
+              alt="Share"
+              id="share"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/flag.svg"
+              alt="Report"
+              id="flag"
+              class="icon"
+            />
+          </div>
         </h3>
         <hr />
         <p>
@@ -329,8 +369,9 @@
           along the course. These tags (and more) will all be introduced in depth later. You can also visit our references for more information. Have fun exploring HTML tags!
         </p>
         <div class="buttons">
-          <button id="prevButton" class="button">◀ Previous</button>
-          <button id="myButton" class="button">Next ▶</button>
+          
+        <button id="prevButton" class="button">Back</button>
+        <button id="myButton" class="button">Next</button>
           <script>
             document
               .getElementById("myButton")

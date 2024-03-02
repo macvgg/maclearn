@@ -3,7 +3,13 @@
   <head>
     <title>HTML Hyperlink | MacLearn</title>
     <link href="style.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
+      async="async"
+    ></script>
+    <name id="page" data="html-hyperlink"></name>
   </head>
   <body>
     <nav class="nav">
@@ -96,7 +102,10 @@
           <a href="html-img.html">
             <li>HTML Image</li>
           </a>
-          <a href="html-hyperlink.html" style="font-weight: bold; color: gold">
+          <a
+            href="html-hyperlink.html"
+            style="font-weight: bold; color: rgb(89, 137, 227)"
+          >
             <li>HTML Hyperlink</li>
           </a>
           <a href="html-list.html">
@@ -139,15 +148,51 @@
             <li>HTML SVG</li>
           </a>
           <a href="advanced-quiz.html">
-            <li>Unit Quiz</li>
-          </a><br /><br />
+            <li>Unit Quiz</li> </a
+          ><br /><br />
         </ul>
       </div>
+      <div class="tbar" id="tbar">
+        <h2 class="bart">HTML Hyperlink</h2>
+        <div class="bard">2.18.2024</div>
+      </div>
+      <script src="app.js"></script>
       <article class="article">
+        <div class="entire">
+          <div class="sharepanel">
+            <div class="sharethis-inline-share-buttons"></div>
+            <div class="copy">
+              <div class="clink" id="clink"></div>
+              <div class="cbtn" id="cbtn">Copy</div>
+            </div>
+          </div>
+        </div>
         <h1 id="hr">HTML Hyperlink</h1>
-        <h3 class="author">By Tony <span class="date">2023.3.3</span>
-          <span style="padding-inline: 10px">•</span> Last updated
-          <span class="date">2024.1.25</span>
+        <h3 class="author">
+          By Tony
+          <!--<span class="date">2023.3.3</span>
+          <span style="padding-inline: 10px">•</span> Last updated-->
+          <span class="date">2.18.2024</span>
+          <div class="icons">
+            <img
+              src="/maclearn/icons/star-regular.svg"
+              alt="Favorite"
+              id="favorite"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/share-solid.svg"
+              alt="Share"
+              id="share"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/flag.svg"
+              alt="Report"
+              id="flag"
+              class="icon"
+            />
+          </div>
         </h3>
         <hr />
         <p>
@@ -156,11 +201,24 @@
           article will tell you how to add a link to your website.
         </p>
         <img src="/maclearn/images/reference/a1.png" alt="A link" />
-        <p>
-          Here is the HTML code responsible for a link:<br /><br />
-          <code> &lta href="https://google.com"&gtGoogle&lt/a&gt<br /> </code>
-        </p>
-        <br />
+        <p>Here is the HTML code responsible for a link:</p>
+        <div class="example">
+          <textarea
+            id="html"
+            class="html-example"
+            placeholder="HTML"
+          ></textarea>
+          <iframe
+            class="iframe-example"
+            id="output"
+            style="background-color: white"
+            sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
+          ></iframe>
+          <script>
+            const htmlExample = document.getElementById("html");
+            htmlExample.value = `<a href="https://google.com">Google</a>`;
+          </script>
+        </div>
         <p>
           We typed the &lta&gt anchor tags and used the "href" attribute to make
           the text inside a clickable link. It tells browser where to go when
@@ -176,11 +234,12 @@
         </ul>
         <p>
           To learn more, you can try it yourself, watch video tutorials, or
-          visit our <a href="/maclearn/coding/references/tags/a-tags.html">references</a>.
+          visit our
+          <a href="/maclearn/coding/references/tags/a-tags.html">references</a>.
         </p>
         <div class="buttons">
-          <button id="prevButton" class="button">◀ Previous</button>
-          <button id="myButton" class="button">Next ▶</button>
+          <button id="prevButton" class="button">Back</button>
+          <button id="myButton" class="button">Next</button>
           <script>
             document
               .getElementById("myButton")
@@ -198,7 +257,10 @@
       <footer class="footer">
         <div>
           © <span id="year">2024</span>
-          <a href="/" target="_blank" style="text-decoration: underline; color: white"
+          <a
+            href="/"
+            target="_blank"
+            style="text-decoration: underline; color: white"
             >MacWeb</a
           >
         </div>

@@ -4,6 +4,12 @@
     <title>HTML Attributes | MacLearn</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
+      async="async"
+    ></script>
+    <name id="page" data="html-attributes"></name>
   </head>
   <body>
     <nav class="nav">
@@ -105,7 +111,10 @@
           <a href="html-formatting.html">
             <li>HTML Formatting</li>
           </a>
-          <a href="html-attributes.html" style="font-weight: bold; color: gold">
+          <a
+            href="html-attributes.html"
+            style="font-weight: bold; color: rgb(89, 137, 227)"
+          >
             <li>HTML Attributes</li>
           </a>
           <a href="beginner-quiz.html">
@@ -137,54 +146,102 @@
           <a href="html-svg.html">
             <li>HTML SVG</li>
           </a>
-          <a href="advanced-quiz.html">
-            <li>Unit Quiz</li> </a
+          <a href="advanced-quiz.html"> <li>Unit Quiz</li> </a
           ><br /><br />
         </ul>
       </div>
+      <div class="tbar" id="tbar">
+        <h2 class="bart">HTML Attributes</h2>
+        <div class="bard">2.18.2024</div>
+      </div>
+      <script src="app.js"></script>
       <article class="article">
+        <div class="entire">
+          <div class="sharepanel">
+            <div class="sharethis-inline-share-buttons"></div>
+            <div class="copy">
+              <div class="clink" id="clink"></div>
+              <div class="cbtn" id="cbtn">Copy</div>
+            </div>
+          </div>
+        </div>
         <h1 id="hr">HTML Attributes</h1>
         <h3 class="author">
-          By Tony <span class="date">2023.3.9</span>
-          <span style="padding-inline: 10px">•</span> Last updated
-          <span class="date">2024.1.25</span>
+          By Tony
+          <!--<span class="date">2023.3.9</span>
+          <span style="padding-inline: 10px">•</span> Last updated-->
+          <span class="date">2.18.2024</span>
+          <div class="icons">
+            <img
+              src="/maclearn/icons/star-regular.svg"
+              alt="Favorite"
+              id="favorite"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/share-solid.svg"
+              alt="Share"
+              id="share"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/flag.svg"
+              alt="Report"
+              id="flag"
+              class="icon"
+            />
+          </div>
         </h3>
         <hr />
         <p>
-          Attributes are additional information added to a tag. They provide more
-          information about the tag's
+          Attributes are additional information added to a tag. They provide
+          more information about the tag's
           <b
             >class, id, title, style, function, and more depending on what the
             tag is.</b
           >
           A tag can have multiple attributes that have different usages.
         </p>
+        <div class="example">
+          <textarea
+            id="html"
+            class="html-example"
+            placeholder="HTML"
+          ></textarea>
+          <iframe
+            class="iframe-example"
+            id="output"
+            style="background-color: white"
+            sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
+          ></iframe>
+          <script>
+            const htmlExample = document.getElementById("html");
+            htmlExample.value = `<a id="link" href="https://google.com" style="color:red;">Link</a>
+<img src="image.png" alt="image" width="100px" class="image">
+<button title="Click me" onclick="animation()">Click</button> `;
+          </script>
+        </div>
+        <span style="font-size: 17px"
+          ><i
+            >Note: There isn't a JavaScript function, so nothing happens when
+            the button's clicked.</i
+          ></span
+        >
         <p>
-          Here are some examples:<br /><br />
-          <code>
-            &lta id="link" href="https://google.com"
-            style="color:red;"&gtLink&lt/a&gt<br />
-            &ltimg src="image.png" alt="image" width="100px" class="image"&gt<br />
-            &ltbutton title="Click me"
-            onclick="animation()"&gtClick&lt/button&gt
-          </code>
-        </p>
-        <p>
-          To give a tag an attribute, type the attribute's name first, then type the "=" sign, and type the
-          value (information), of the attribute in between the "" symbols.
-          Always put attributes in the opening tag and use spaces to seperate
-          different attributes.
+          To give a tag an attribute, type the attribute's name first, then type
+          the "=" sign, and type the value (information), of the attribute in
+          between the "" symbols. Always put attributes in the opening tag and
+          use spaces to seperate different attributes.
         </p>
         <ul>
           <li>
-            "id" attribute gives the tag a unique id that no other tags can
-            have
+            "id" attribute gives the tag a unique id that no other tags can have
           </li>
-          <li>
-            "class" assigns the tag a class that other tags can also have
-          </li>
+          <li>"class" assigns the tag a class that other tags can also have</li>
           <li>"href" tells the broswer the destination of a link</li>
-          <li>"style" lets us style the tag with CSS syntax directly in HTML</li>
+          <li>
+            "style" lets us style the tag with CSS syntax directly in HTML
+          </li>
           <li>"src" tells the broswer the source of an element</li>
           <li>"alt" is alternative text</li>
           <li>"width" is the width of the element</li>
@@ -193,34 +250,17 @@
             "onclick" runs JavaScript functions when the element is clicked
           </li>
         </ul>
-
-        <p><br />Here is the output of the code above:</p>
-        <a
-          id="button"
-          href="https://google.com"
-          target="_blank"
-          style="color: red"
-          >Link</a
-        >
-        <img src="image.png" alt="image" width="100px" style="width: 100px !important;" class="image" />
-        <button title="Click me" onclick="animation()">Click</button
-        ><br /><br />
-        <span style="font-size: 17px"
-          ><i
-            >Note: There isn't a JavaScript function, so nothing happens when the button's clicked.</i
-          ></span
-        ><br /><br />
         <p>
-          Attributes make HTML tags even more powerful. By selecting a tag's id or
-          class attribute, you can style the tag or run JavaScript code with it! And
-          that's not all, there are hundreds of attributes for different tags
-          and different usages. Attribute is a really important and powerful
-          part of HTML5. Check our references for more interesting attributes
-          and learn more 😄!
+          Attributes make HTML tags even more powerful. By selecting a tag's id
+          or class attribute, you can style the tag or run JavaScript code with
+          it! And that's not all, there are hundreds of attributes for different
+          tags and different usages. Attribute is a really important and
+          powerful part of HTML5. Check our references for more interesting
+          attributes and learn more 😄!
         </p>
         <div class="buttons">
-          <button id="prevButton" class="button">◀ Previous</button>
-          <button id="myButton" class="button">Next ▶</button>
+          <button id="prevButton" class="button">Back</button>
+          <button id="myButton" class="button">Next</button>
           <script>
             document
               .getElementById("myButton")

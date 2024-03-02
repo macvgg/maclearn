@@ -3,7 +3,13 @@
   <head>
     <title>HTML Formatting | MacLearn</title>
     <link href="style.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
+      async="async"
+    ></script>
+    <name id="page" data="html-formatting"></name>
   </head>
   <body>
     <nav class="nav">
@@ -102,7 +108,10 @@
           <a href="html-list.html">
             <li>HTML List</li>
           </a>
-          <a href="html-formatting.html" style="font-weight: bold; color: gold">
+          <a
+            href="html-formatting.html"
+            style="font-weight: bold; color: rgb(89, 137, 227)"
+          >
             <li>HTML Formatting</li>
           </a>
           <a href="html-attributes.html">
@@ -137,47 +146,86 @@
           <a href="html-svg.html">
             <li>HTML SVG</li>
           </a>
-          <a href="advanced-quiz.html">
-            <li>Unit Quiz</li>
-          </a><br /><br />
+          <a href="advanced-quiz.html"> <li>Unit Quiz</li> </a
+          ><br /><br />
         </ul>
       </div>
+      <div class="tbar" id="tbar">
+        <h2 class="bart">HTML Formatting</h2>
+        <div class="bard">2.18.2024</div>
+      </div>
+      <script src="app.js"></script>
       <article class="article">
+        <div class="entire">
+          <div class="sharepanel">
+            <div class="sharethis-inline-share-buttons"></div>
+            <div class="copy">
+              <div class="clink" id="clink"></div>
+              <div class="cbtn" id="cbtn">Copy</div>
+            </div>
+          </div>
+        </div>
         <h1 id="hr">HTML Formatting</h1>
-        <h3 class="author">By Tony <span class="date">2023.3.4</span> <span style="padding-inline: 10px;">•</span> Last updated <span class="date">2024.1.24</span></h3>
+        <h3 class="author">
+          By Tony
+          <!--<span class="date">2023.3.4</span> <span style="padding-inline: 10px;">•</span> Last updated-->
+          <span class="date">2.18.2024</span>
+          <div class="icons">
+            <img
+              src="/maclearn/icons/star-regular.svg"
+              alt="Favorite"
+              id="favorite"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/share-solid.svg"
+              alt="Share"
+              id="share"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/flag.svg"
+              alt="Report"
+              id="flag"
+              class="icon"
+            />
+          </div>
+        </h3>
         <hr />
         <p>
           We often make text <mark>highlighted</mark>, <b>bolded</b>,
           <u>underline</u>, or <i>italic</i> to emphasize important text. This
           article will tell you how to format text in HTML.
         </p>
-        <p>
-          Some formatting tags example:<br /><br />
-          <code>
-            &ltp&gt<br />
-            <span style="color: transparent">ww</span>&ltb&gtI'm
-            bolded&lt/b&gt<br />
-            <span style="color: transparent">ww</span>&ltstrong&gtI'm
-            strong&lt/strong&gt<br />
-            <span style="color: transparent">ww</span>&ltu&gtI'm
-            underlined&lt/u&gt<br />
-            <span style="color: transparent">ww</span>&ltins&gtI'm
-            inserted&lt/ins&gt<br />
-            <span style="color: transparent">ww</span>&ltmark&gtI'm
-            highlighted&lt/mark&gt<br />
-            <span style="color: transparent">ww</span>&lti&gtI'm
-            italic&lt/i&gt<br />
-            <span style="color: transparent">ww</span>&ltem&gtI'm
-            emphasized&lt/em&gt<br />
-            <span style="color: transparent">ww</span>&ltdel&gtI'm
-            deleted&lt/del&gt<br />
-            <span style="color: transparent">ww</span>Some text &ltsup&gtI'm
-            superscript&lt/sup&gt<br />
-            <span style="color: transparent">ww</span>Some text &ltsub&gtI'm
-            subscript&lt/sub&gt<br />
-            &lt/p&gt
-          </code>
-        </p>
+        <p>Some formatting tags example:</p>
+        <div class="example">
+          <textarea
+            id="html"
+            class="html-example"
+            placeholder="HTML"
+          ></textarea>
+          <iframe
+            class="iframe-example"
+            id="output"
+            style="background-color: white"
+            sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
+          ></iframe>
+          <script>
+            const htmlExample = document.getElementById("html");
+            htmlExample.value = `<p>
+<b>I'm bolded</b><br>
+<strong>I'm strong</strong><br>
+<u>I'm underlined</u><br>
+<ins>I'm inserted</ins><br>
+<mark>I'm highlighted</mark><br>
+<i>I'm italic</i><br>
+<em>I'm emphasized</em><br>
+<del>I'm deleted</del><br>
+Some text <sup>I'm superscript</sup><br>
+Some text <sub>I'm subscript</sub><br>
+</p> `;
+          </script>
+        </div>
         <p>
           So it's pretty clear what tag is for. Every formatting tag has a
           closing tag and the text inside them is formatted. You can also put a
@@ -195,29 +243,10 @@
                 ><i>th<sup>is</sup></i></del
               ></ins
             ></sub
-          >. <br />Here is the output of the code above:
+          >.
         </p>
         <p>
-          <b>I'm bolded</b><br />
-          <strong>I'm strong</strong><br />
-          <u>I'm underlined</u><br />
-          <ins>I'm inserted</ins><br />
-          <mark>I'm highlighted</mark><br />
-          <i>I'm italic</i><br />
-          <em>I'm emphasized</em><br />
-          <del>I'm deleted</del><br />
-          Some text <sup>I'm superscript</sup><br />
-          Some text <sub>I'm subscript</sub><br />
-        </p>
-        <span style="font-size: 17px"
-          ><i
-            >Note: We used the
-            <a href="/reference/tags/br-tag.html">&ltbr&gt</a> tag to seperate
-            each line.</i
-          ></span
-        ><br /><br />
-        <p>
-          You maybe noticed some formatting tags have the same output like
+          You may already noticed some formatting tags have the same output like
           &ltb&gt and &ltstrong&gt tags or &lti&gt and &ltem&gt tags. Yes, they
           are exactly same. You can open VS Code and explore all these
           formatting tags yourself. If you want to make the formatting output
@@ -225,18 +254,50 @@
         </p>
         <h2>Bonus: HTML Comment</h2>
         <p>
-          Having comments in your code can have many purposes, like noting what a section of code is for, jot down ideas, explain code, or temperoraily making content invisible. To do this in HTML, simply follow the example below:
+          Having comments in your code can have many purposes, like noting what
+          a section of code is for, jot down ideas, explain code, or
+          temperoraily making content invisible. To do this in HTML, simply
+          follow the example below:
         </p>
-        <code>
-          &lt!-- Your comment goes here --&gt<br>
-          &lt!-- This is a comment --&gt
-        </code>
+        <div class="example">
+          <textarea
+            id="html2"
+            class="html-example"
+            placeholder="HTML"
+          ></textarea>
+          <iframe
+            class="iframe-example"
+            id="output2"
+            style="background-color: white"
+            sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
+          ></iframe>
+          <script>
+            const htmlExample2 = document.getElementById("html2");
+            htmlExample2.value = `<!-- Your comment goes here -->
+<!-- This is a comment --> 
+<!-- Comments aren't displayed -->`;
+            setInterval(runCode2, 1000);
+
+            function runCode2() {
+              const html2 = document.getElementById("html2").value;
+              const output2 =
+                document.getElementById("output2").contentWindow.document;
+              output2.open();
+              output2.writeln(" \<body\>" + html2 + "\</body\>");
+              output2.close();
+            }
+          </script>
+        </div>
         <p>
-          To add a comment in HTML, just type a less than symbol (&lt), followed by an exclamation mark (!) with two hyphens (--) behind it. To close the comment, type two hyphens (--) and put a greater than tag (&gt) to close it. Comments are not visible in the HTML output, but is visible in the code.
+          To add a comment in HTML, just type a less than symbol (&lt), followed
+          by an exclamation mark (!) with two hyphens (--) behind it. To close
+          the comment, type two hyphens (--) and put a greater than tag (&gt) to
+          close it. Comments are not visible in the HTML output, but is visible
+          in the code.
         </p>
         <div class="buttons">
-          <button id="prevButton" class="button">◀ Previous</button>
-          <button id="myButton" class="button">Next ▶</button>
+          <button id="prevButton" class="button">Back</button>
+          <button id="myButton" class="button">Next</button>
           <script>
             document
               .getElementById("myButton")
@@ -254,7 +315,10 @@
       <footer class="footer">
         <div>
           © <span id="year">2024</span>
-          <a href="/" target="_blank" style="text-decoration: underline; color: white"
+          <a
+            href="/"
+            target="_blank"
+            style="text-decoration: underline; color: white"
             >MacWeb</a
           >
         </div>

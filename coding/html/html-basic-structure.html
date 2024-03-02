@@ -4,6 +4,12 @@
     <title>HTML Basic Structure | MacLearn</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
+      async="async"
+    ></script>
+    <name id="page" data="html-basic"></name>
   </head>
   <body>
     <nav class="nav">
@@ -89,7 +95,7 @@
           </a>
           <a
             href="html-basic-structure.html"
-            style="font-weight: bold; color: gold"
+            style="font-weight: bold; color: rgb(89, 137, 227)"
           >
             <li>HTML Basic Structure</li>
           </a>
@@ -145,12 +151,46 @@
           ><br /><br />
         </ul>
       </div>
+      <div class="tbar" id="tbar">
+        <h2 class="bart">HTML Basic Structure</h2>
+        <div class="bard">2.19.2024</div>
+      </div>
+      <script src="app.js"></script>
       <article class="article">
+        <div class="entire">
+          <div class="sharepanel">
+            <div class="sharethis-inline-share-buttons"></div>
+            <div class="copy">
+              <div class="clink" id="clink"></div>
+              <div class="cbtn" id="cbtn">Copy</div>
+            </div>
+          </div>
+        </div>
         <h1>HTML Basic Structure</h1>
         <h3 class="author">
-          By Tony <span class="date">2023.3.1</span>
-          <span style="padding-inline: 10px">•</span> Last updated
-          <span class="date">2024.1.25</span>
+          By Tony <!--<span class="date">2023.3.1</span>
+          <span style="padding-inline: 10px">•</span> Last updated-->
+          <span class="date">2.19.2024</span>
+          <div class="icons">
+            <img
+              src="/maclearn/icons/star-regular.svg"
+              alt="Favorite"
+              id="favorite"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/share-solid.svg"
+              alt="Share"
+              id="share"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/flag.svg"
+              alt="Report"
+              id="flag"
+              class="icon"
+            />
+          </div>
         </h3>
         <hr />
         <p>
@@ -211,8 +251,9 @@
           type in different tags to explore more about these tags.
         </p>
         <div class="buttons">
-          <button id="prevButton" class="button">◀ Previous</button>
-          <button id="myButton" class="button">Next ▶</button>
+          
+        <button id="prevButton" class="button">Back</button>
+        <button id="myButton" class="button">Next</button>
           <script>
             document
               .getElementById("myButton")

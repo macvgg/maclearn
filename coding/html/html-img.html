@@ -4,6 +4,12 @@
     <title>HTML Image | MacLearn</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
+      async="async"
+    ></script>
+    <name id="page" data="html-img"></name>
   </head>
   <body>
     <nav class="nav">
@@ -93,7 +99,10 @@
           <a href="html-article.html">
             <li>HTML Article Structure</li>
           </a>
-          <a href="html-img.html" style="font-weight: bold; color: gold">
+          <a
+            href="html-img.html"
+            style="font-weight: bold; color: rgb(89, 137, 227)"
+          >
             <li>HTML Image</li>
           </a>
           <a href="html-hyperlink.html">
@@ -142,12 +151,47 @@
           ><br /><br />
         </ul>
       </div>
+      <div class="tbar" id="tbar">
+        <h2 class="bart">HTML Image</h2>
+        <div class="bard">2.18.2024</div>
+      </div>
+      <script src="app.js"></script>
       <article class="article">
+        <div class="entire">
+          <div class="sharepanel">
+            <div class="sharethis-inline-share-buttons"></div>
+            <div class="copy">
+              <div class="clink" id="clink"></div>
+              <div class="cbtn" id="cbtn">Copy</div>
+            </div>
+          </div>
+        </div>
         <h1>HTML Image</h1>
         <h3 class="author">
-          By Tony <span class="date">2023.3.3</span>
-          <span style="padding-inline: 10px">•</span> Last updated
-          <span class="date">2024.1.25</span>
+          By Tony
+          <!--<span class="date">2023.3.3</span>
+          <span style="padding-inline: 10px">•</span> Last updated-->
+          <span class="date">2.18.2024</span>
+          <div class="icons">
+            <img
+              src="/maclearn/icons/star-regular.svg"
+              alt="Favorite"
+              id="favorite"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/share-solid.svg"
+              alt="Share"
+              id="share"
+              class="icon"
+            />
+            <img
+              src="/maclearn/icons/flag.svg"
+              alt="Report"
+              id="flag"
+              class="icon"
+            />
+          </div>
         </h3>
         <hr />
         <p>
@@ -163,24 +207,36 @@
           alt="An image"
           style="width: 40%; margin-inline: 30%"
         />
+        <p>This is an image tag's HTML code:</p>
+        <div class="example">
+          <textarea
+            id="html"
+            class="html-example"
+            placeholder="HTML"
+          ></textarea>
+          <iframe
+            class="iframe-example"
+            id="output"
+            style="background-color: white"
+            sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
+          ></iframe>
+          <script>
+            const htmlExample = document.getElementById("html");
+            htmlExample.value = `<img src="example.png" alt="Image">`;
+          </script>
+        </div>
         <p>
-          This is an image tag's HTML code:<br /><br />
-          <code> &ltimg src="example.png" alt="Image"&gt </code><br /><span
-            style="font-size: 17px"
-            ><i>Note: &ltimg&gt tag doesn't have a closing tag.</i></span
-          ><br />
-        </p>
-
-        <p>
-          The src attribute of the &ltimg&gt tag tells the browser the image source so it can display it properly, and alt attribute tells the browser what the alternative
-          text of the image is for accessebility or if the image doesn't show.
-          These are two most important attributes for &ltimg&gt tag. For more
-          information, visit our
-          <a href="/maclearn/coding/references/tags/img-tag.html">references</a>.
+          The src attribute of the &ltimg&gt tag tells the browser the image
+          source so it can display it properly, and alt attribute tells the
+          browser what the alternative text of the image is for accessebility or
+          if the image doesn't show. These are two most important attributes for
+          &ltimg&gt tag. For more information, visit our
+          <a href="/maclearn/coding/references/tags/img-tag.html">references</a
+          >.
         </p>
         <div class="buttons">
-          <button id="prevButton" class="button">◀ Previous</button>
-          <button id="myButton" class="button">Next ▶</button>
+          <button id="prevButton" class="button">Back</button>
+          <button id="myButton" class="button">Next</button>
           <script>
             document
               .getElementById("myButton")
