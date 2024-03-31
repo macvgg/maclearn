@@ -4,104 +4,10 @@
     <title>HTML Advanced Quiz | MacLearn</title>
     <link href="style.css" rel="stylesheet" />
     <link href="/maclearn/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="quiz.css">
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
   </head>
   <body>
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-
-      body {
-        background-color: rgb(255, 255, 255);
-      }
-
-      .flex {
-        width: 70%;
-        margin-right: 5%;
-        margin-left: 25%;
-
-        height: 500px;
-        display: flex;
-        justify-content: center;
-      }
-
-      .container {
-        background-color: white;
-        width: 100%;
-        padding: 30px;
-        border-radius: 10px;
-      }
-
-      .btn-grid {
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        gap: 10px;
-        margin: 20px 0;
-      }
-
-      .btn {
-        height: 10vh;
-        font-size: 20px;
-        border-radius: 20px;
-        width: 100%;
-        border: none;
-        color: white;
-        outline: none;
-        cursor: pointer;
-        font-weight: bold;
-        background-color: black;
-        transition: color 0.5s ease;
-      }
-
-      .btn:hover {
-        color: gold;
-      }
-
-      .start-btn,
-      .next-btn {
-        width: 100%;
-        font-size: 20px;
-        padding-block: 10px;
-        border-radius: 50px;
-        font-weight: bold;
-        margin-block: 20px;
-      }
-
-      #controls {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      #question {
-        font-size: 30px;
-        padding-block: 40px;
-      }
-
-      #thing {
-        font-size: 20px;
-      }
-
-      .hide {
-        display: none;
-      }
-
-      .sentence {
-        display: block;
-        color: rgb(255, 255, 255);
-        font-size: 20px;
-        text-align: center;
-      }
-
-      #message {
-        font-size: 25px;
-        padding: 25px;
-      }
-    </style>
     <nav class="nav">
       <a href="/maclearn/" class="logo">
         <img src="/maclearn/maclearn-logo.png" alt="MacLearn Logo" />
@@ -207,7 +113,6 @@
           <a href="beginner-quiz.html">
             <li>Unit Quiz</li>
           </a>
-          <br />
           <h2>HTML Advanced</h2>
 
           <a href="html-forms.html">
@@ -252,9 +157,6 @@
       <div class="flex">
         <div class="container">
           <div id="question-container" class="hide">
-            <div id="thing" class="hide">
-              Your score:<span id="score"></span>
-            </div>
             <div id="question">Question</div>
 
             <div id="answer-buttons" class="btn-grid">
@@ -266,8 +168,6 @@
           </div>
           <div id="controls">
             <div id="message">
-              <br /><br /><button id="start" class="start-btn btn">Start</button
-              ><br /><br />
               <div
                 id="message2"
                 style="
@@ -276,104 +176,162 @@
                   font-size: 27px;
                 "
               >
-                Are you familiar with more advanced HTML skill and tips? Click
+                Are you familiar with more advanced HTML skills and tips? Click
                 "start" to see what you know!
               </div>
             </div>
-            <br />
-
-            <button
-              id="next"
-              class="next-btn btn hide"
-              style="margin-right: 50px"
-            >
-              Next
-            </button>
+          </div>
+          <div class="results" id="results">
+            <div class="score" id="score">fdewedf</div>
           </div>
         </div>
       </div>
-      <span id="sentence" class="hide"></span>
-
+      <article class="article">
+        <div class="buttons">
+          <button id="back" class="button">Back</button>
+          <button id="start" class="button">Start</button>
+        </div>
+      </article>
       <script>
-        const start = document.getElementById("start");
-        const next = document.getElementById("next");
-        const sentence = document.getElementById("sentence");
-        const quiz = document.getElementById("question-container");
-        const question = document.getElementById("question");
-        const answerButtonsElement = document.getElementById("answer-buttons");
-        const scorePlace = document.getElementById("score");
-        const point = document.getElementById("thing");
-        const message = document.getElementById("message2");
-
-        let shuffledQuestions, currentQuestionIndex;
-        let score = 0;
-
-        start.addEventListener("click", startQuiz);
-        next.addEventListener("click", () => {
-          currentQuestionIndex++;
-          setNextQuestion();
+        document.addEventListener("DOMContentLoaded", () => {
+  const start = document.getElementById("start");
+  const quiz = document.getElementById("question-container");
+  const question = document.getElementById("question");
+  const answerButtonsElement = document.getElementById("answer-buttons");
+  const back = document.getElementById("back");
+  const controls = document.getElementById("controls");
+  const results = document.getElementById("results");
+  let currentQuestionIndex, index;
+  let answerArray = [];
+  let correctArray = [];
+  back.classList.add("hide");
+  results.classList.add("hide");
+  start.addEventListener("click", () => {
+    if (start.innerHTML === "Start") {
+      startQuiz();
+      controls.style.display = "none";
+    } else if (start.innerHTML === "Next") {
+      currentQuestionIndex++;
+      setNextQuestion();
+    } else if (start.innerHTML === "Finish") {
+      currentQuestionIndex++;
+      question.classList.add("hide");
+      results.classList.remove("hide");
+      answerButtonsElement.classList.add("hide");
+      let actualCount = 0;
+      correctArray.forEach((correct) => {
+        if (correct !== null) {
+          actualCount++;
+        }
+      });
+      let percentage = Math.round((actualCount / questions.length) * 100);
+      results.innerHTML = "Your quiz score is " + percentage + "% correct. <br> Go back, review, and improve your score!";
+      
+      start.innerHTML = "Review!";
+        start.addEventListener("click", () => {
+          window.location.href = "/maclearn/coding/html/html-forms.html";
         });
-
-        function startQuiz() {
-          console.log("working");
-          start.classList.add("hide");
-          message.classList.add("hide");
-          quiz.classList.remove("hide");
-          shuffledQuestions = questions;
-          currentQuestionIndex = 0;
-          setNextQuestion();
-        }
-
-        function setNextQuestion() {
-          reset();
-          showQuestion(questions[currentQuestionIndex]);
-          scorePlace.innerText = score;
-        }
-
-        function reset() {
-          next.classList.add("hide");
-          point.classList.remove("hide");
-          while (answerButtonsElement.firstChild) {
-            answerButtonsElement.removeChild(answerButtonsElement.firstChild);
+      if (percentage > 80) {
+        results.innerHTML = "Your quiz score is " + percentage + "% correct! <br> Congrats! You just finished the HTML course 🥳!";
+        start.innerHTML = "Let's go!";
+        start.addEventListener("click", () => {
+          if (start.innerHTML === "Let's go!") {
+            
+          window.location.href = "/maclearn/coding/html/finish.html";
           }
-        }
+        });
+      }
+    }
+  });
 
-        function showQuestion(q) {
-          question.innerText = q.question;
-          q.answers.forEach((answer) => {
-            const button = document.createElement("button");
-            button.innerText = answer.text;
-            button.classList.add("btn");
-            if (answer.correct) {
-              button.dataset.correct = answer.correct;
-            }
-            button.addEventListener("click", selectAnswer);
-            answerButtonsElement.appendChild(button);
-          });
-        }
+  back.addEventListener("click", () => {
+    if (currentQuestionIndex >= 1) {
+      currentQuestionIndex--;
+      setNextQuestion();
+      question.classList.remove("hide");
+      answerButtonsElement.classList.remove("hide");
+      results.classList.add("hide");
+      start.innerHTML = "Next";
+      if (currentQuestionIndex === 6) {
+        start.innerHTML = "Finish";
+      }
+    } else {
+      controls.style.display = "flex";
+      start.innerHTML = "Start";
+      message.classList.remove("hide");
+      quiz.classList.add("hide");
+      back.classList.add("hide");
+    }
+  });
 
-        function selectAnswer(e) {
-          const selectedAnswer = e.target;
-          const correct = selectedAnswer.dataset.correct;
-          sentence.classList.remove("hide");
-          sentence.classList.add("sentence");
+  function startQuiz() {
+    start.innerHTML = "Next";
+    message.classList.add("hide");
+    quiz.classList.remove("hide");
+    shuffledQuestions = questions;
+    currentQuestionIndex = 0;
+    back.classList.remove("hide");
+    setNextQuestion();
+  }
 
-          if (selectedAnswer.dataset.correct) {
-            sentence.innerText = "Correct!";
-            console.log("correct!");
-            score += 10;
-            if (questions.length > currentQuestionIndex + 1) {
-              next.classList.remove("hide");
-            } else {
-              next.innerText = "See my score";
-              next.classList.remove("hide");
-            }
-          } else {
-            next.classList.add("hide");
-            console.log("wrong!");
-            sentence.innerText = "Wrong!";
-          }
+  function setNextQuestion() {
+    reset();
+    showQuestion(questions[currentQuestionIndex]);
+    if (currentQuestionIndex === 6) {
+      start.innerHTML = "Finish";
+    }
+  }
+
+  function reset() {
+    while (answerButtonsElement.firstChild) {
+      answerButtonsElement.removeChild(answerButtonsElement.firstChild);
+    }
+  }
+
+  function showQuestion(q) {
+    question.innerText = q.question;
+    index = 0;
+    q.answers.forEach((answer) => {
+      const button = document.createElement("div");
+      const label = document.createElement("label");
+      const radioButton = document.createElement("input");
+      radioButton.setAttribute("type", "radio");
+      label.setAttribute("for", index);
+      radioButton.setAttribute("id", index);
+      radioButton.setAttribute("name", "radio");
+      label.innerText = answer.text;
+      button.classList.add("btn");
+      if (answer.correct) {
+        button.dataset.correct = answer.correct;
+      }
+      button.addEventListener("click", selectAnswer);
+      answerButtonsElement.appendChild(button);
+      button.appendChild(radioButton);
+      button.appendChild(label);
+      if (answerArray[currentQuestionIndex]) {
+        if (answerArray[currentQuestionIndex] === button.innerHTML) {
+          radioButton.checked = true;
         }
+      }
+      index++;
+    });
+  }
+
+  function selectAnswer(e) {
+    const selectedAnswer = e.target;
+    const correct = selectedAnswer.parentElement.dataset.correct;
+    if (questions.length > currentQuestionIndex + 1) {
+      start.innerHTML = "Next";
+    } else {
+      start.innerHTML = "Finish";
+    }
+    if (selectedAnswer.parentElement.dataset.correct) {
+      correctArray[currentQuestionIndex] = selectedAnswer;
+    } else {
+      correctArray.splice(currentQuestionIndex, 1);
+    }
+    answerArray[currentQuestionIndex] = selectedAnswer.parentElement.innerHTML;
+  }
 
         const questions = [ //NOT COMPLETED!!!
           {
@@ -441,6 +399,7 @@
             ],
           },
         ];
+        });
       </script>
     </div>
     <footer class="footer">

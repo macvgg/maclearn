@@ -78,22 +78,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const html = document.getElementById("html").value;
     const output = document.getElementById("output").contentWindow.document;
     output.open();
-    output.writeln(
-        "<body>" +
-        html +
-        "</body>"
-    );
+    output.writeln("<body>" + html + "</body>");
     output.close();
   });
   function runCode() {
     const html = document.getElementById("html").value;
     const output = document.getElementById("output").contentWindow.document;
     output.open();
-    output.writeln(
-        "<body>" +
-        html +
-        "</body>"
-    );
+    output.writeln("<body>" + html + "</body>");
     output.close();
   }
 });

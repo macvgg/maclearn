@@ -4,6 +4,7 @@
     <title>HTML Beginner Quiz | MacLearn</title>
     <link rel="stylesheet" href="quiz.css" />
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <script src="quiz.js"></script>
   </head>
   <body>
     <nav class="nav">
@@ -192,7 +193,7 @@
                   font-size: 27px;
                 "
               >
-                Are you familiar with the basic HTML skill and tips? Click
+                Are you familiar with the basic HTML skills and tips? Click
                 "start" to see what you know!
               </div>
             </div>
@@ -208,8 +209,8 @@
           <button id="start" class="button">Start</button>
         </div>
       </article>
-      <span id="sentence" class="hide"></span>
       <script>
+        /*
         document
           .getElementById("myButton")
           .addEventListener("click", function () {
@@ -219,194 +220,7 @@
           .getElementById("prevButton")
           .addEventListener("click", function () {
             window.location.href = "html-attributes.html";
-          });
-      </script>
-      <script>
-        const start = document.getElementById("start");
-        const sentence = document.getElementById("sentence");
-        const quiz = document.getElementById("question-container");
-        const question = document.getElementById("question");
-        const answerButtonsElement = document.getElementById("answer-buttons");
-        const back = document.getElementById("back");
-        const controls = document.getElementById("controls");
-        const results = document.getElementById("results");
-        const scores = document.getElementById("score");
-        let shuffledQuestions, currentQuestionIndex, index;
-        let score = 0;
-        back.classList.add("hide");
-        results.classList.add("hide");
-        start.addEventListener("click", () => {
-          if (start.innerHTML === "Start") {
-            startQuiz();
-            controls.style.display = "none";
-          } else if (start.innerHTML === "Next") {
-            currentQuestionIndex++;
-            setNextQuestion();
-          } else if (start.innerHTML === "Finish") {
-            currentQuestionIndex++;
-            question.classList.add("hide");
-            results.classList.remove("hide");
-            answerButtonsElement.classList.add("hide");
-          }
-        });
-
-        back.addEventListener("click", () => {
-          if (currentQuestionIndex >= 1) {
-              currentQuestionIndex--;
-            setNextQuestion();
-            question.classList.remove("hide");
-            answerButtonsElement.classList.remove("hide");
-            results.classList.add("hide");
-            start.innerHTML = "Next";
-          } else {
-            controls.style.display = "flex";
-            start.innerHTML = "Start";
-            message.classList.remove("hide");
-            quiz.classList.add("hide");
-            back.classList.add("hide");
-          }
-        });
-
-        function startQuiz() {
-          console.log("working");
-          start.innerHTML = "Next";
-          /*start.classList.add("hide");*/
-          message.classList.add("hide");
-          quiz.classList.remove("hide");
-          shuffledQuestions = questions;
-          currentQuestionIndex = 0;
-          back.classList.remove("hide");
-          setNextQuestion();
-        }
-
-        function setNextQuestion() {
-          reset();
-          showQuestion(questions[currentQuestionIndex]);
-          if (currentQuestionIndex === 6) {
-            start.innerHTML = "Finish";
-          }
-        }
-
-        function reset() {
-          while (answerButtonsElement.firstChild) {
-            answerButtonsElement.removeChild(answerButtonsElement.firstChild);
-          }
-        }
-
-        function showQuestion(q) {
-          question.innerText = q.question;
-          index = 0;
-          q.answers.forEach((answer) => {
-            const button = document.createElement("div");
-            const label = document.createElement("label");
-            const radioButton = document.createElement("input");
-            radioButton.setAttribute("type", "radio");
-            label.setAttribute("for", index);
-            radioButton.setAttribute("id", index);
-            radioButton.setAttribute("name", "radio");
-            label.innerText = answer.text;
-            button.classList.add("btn");
-            if (answer.correct) {
-              button.dataset.correct = answer.correct;
-              console.log(button.dataset.correct);
-            }
-            button.addEventListener("click", selectAnswer);
-            answerButtonsElement.appendChild(button);
-            button.appendChild(radioButton);
-            button.appendChild(label);
-            index++;
-          });
-        }
-
-        function selectAnswer(e) {
-          const selectedAnswer = e.target;
-          console.log(selectedAnswer);
-          const correct = selectedAnswer.parentElement.dataset.correct;
-          /*
-          sentence.classList.remove("hide");
-          sentence.classList.add("sentence");
-          if (selectedAnswer.parentElement.dataset.correct) {
-            sentence.innerText = "Correct!";
-            console.log("correct!");
-            score += 10;
-            if (questions.length > currentQuestionIndex + 1) {
-              start.innerHTML = "Next";
-            } else {
-              start.innerHTML = "Finish";
-            }
-          } else {
-            console.log("wrong!");
-            sentence.innerText = "Wrong!";
-          }*/
-        }
-
-        const questions = [
-          {
-            question: "What does HTML stand for?",
-            answers: [
-              { text: "Hypertext Marking Language", correct: false },
-              { text: "Hacking Technology Manual Language", correct: false },
-              { text: "Hypertext Markup Language", correct: true },
-              { text: "Http Text Making Language", correct: false },
-            ],
-          },
-          {
-            question: "Which tag and attribute is used to create links?",
-            answers: [
-              { text: '<link href = " ">', correct: false },
-              { text: "<anchor>", correct: false },
-              { text: '<a src = " ">', correct: false },
-              { text: '<a href = " ">', correct: true },
-            ],
-          },
-          {
-            question: "Which tag is used to create a level one heading?",
-            answers: [
-              { text: "<heading>", correct: false },
-              { text: "<h1>", correct: true },
-              { text: "<h6>", correct: false },
-              { text: "<head>", correct: false },
-            ],
-          },
-          {
-            question:
-              "Which pair of tags wraps the visible content of a webpage?",
-            answers: [
-              { text: "<information>", correct: false },
-              { text: "<body>", correct: true },
-              { text: "<head>", correct: false },
-              { text: "<content>", correct: false },
-            ],
-          },
-          {
-            question: 'Fill in the blank: <img _____ = "image.png">',
-            answers: [
-              { text: "link", correct: false },
-              { text: "source", correct: false },
-              { text: "image", correct: false },
-              { text: "src", correct: true },
-            ],
-          },
-          {
-            question: "Which tag is used to make list items?",
-            answers: [
-              { text: "<list-items>", correct: false },
-              { text: "<list>", correct: false },
-              { text: "<li>", correct: true },
-              { text: "<ul>", correct: false },
-            ],
-          },
-          {
-            question:
-              'What is the alt attribute for: <img src="image.png" alt="An image.">',
-            answers: [
-              { text: "Alternative Image", correct: false },
-              { text: "Alternative Text", correct: true },
-              { text: "Autoclick", correct: false },
-              { text: "It doesn't do anything", correct: false },
-            ],
-          },
-        ];
+          });*/
       </script>
     </div>
     <footer class="footer">
