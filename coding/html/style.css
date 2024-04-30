@@ -226,10 +226,10 @@ a {
 }
 
 .congratulate h1 {
-    text-align: center;
-    font-size: 35px;
-    background-color: lightyellow;
-    line-height: 56px;
+  text-align: center;
+  font-size: 35px;
+  background-color: lightyellow;
+  line-height: 56px;
 }
 
 .article:has(.congratulate) {
@@ -266,7 +266,7 @@ a {
 h2 {
   text-align: center;
   font-size: 30px;
-  
+
   color: rgb(215, 215, 215);
   margin-block: 5%;
 }
@@ -424,11 +424,17 @@ p code {
   padding-block: 4%;
 }
 
+.sidebar ul {
+  padding-bottom: 50px !important;
+}
+
 .sidebtns {
   display: flex;
   width: 18vw;
   margin-inline: 1vw;
   margin-block: 10px;
+  position: fixed;
+  bottom: 0;
   border-radius: 8px;
   box-shadow: 0px 0px 15px rgb(45, 45, 45);
 }
@@ -449,7 +455,6 @@ p code {
 }
 
 .sidebtn:last-child {
-  
   border-radius: 0px 8px 8px 0px;
 }
 
@@ -574,8 +579,6 @@ p code {
   width: 0.9vw;
 }
 
-
-
 .tbar {
   transform: translateY(-300px);
   position: fixed;
@@ -618,7 +621,7 @@ p code {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  box-shadow: 0px 0px 50px rgb(50, 50, 50); 
+  box-shadow: 0px 0px 50px rgb(50, 50, 50);
   top: 35%;
   left: 15%;
   flex-wrap: wrap;
@@ -664,7 +667,7 @@ p code {
 
 .cbtn {
   width: 15%;
-  background-color: #2A49AF;
+  background-color: #2a49af;
   height: 100%;
   border-radius: 0px 30px 30px 0px;
   color: white;
@@ -676,7 +679,7 @@ p code {
 }
 
 .cbtn:hover {
-  background-color: #253E90;
+  background-color: #253e90;
 }
 
 .icon:hover {
@@ -693,4 +696,20 @@ p code {
 
 .tbar-v {
   transform: translateY(0);
+}
+
+@media (width < 600px) {
+  .sidebar {
+    display: none !important;
+  }
+
+  .article {
+    width: 80%;
+    margin-inline: 10%;
+  }
+  .tbar {
+    width: 100%;
+    margin: 0;
+    left: 0 !important;
+  }
 }

@@ -83,60 +83,12 @@
     <div class="wrapper side-wrapper">
       <div class="sidebar side">
         <ul style="list-style-type: none">
-          <h2>HTML Basics</h2>
-          <a href="What-is-coding.html">
-            <li>What Is Coding?</li>
-          </a>
-          <a href="what-is-html.html">
-            <li>What Is HTML?</li>
-          </a>
-          <a href="more-html-tags.html">
-            <li>More HTML Tags!</li>
-          </a>
-          <a href="html-basic-structure.html">
-            <li>HTML Basic Structure</li>
-          </a>
-          <a href="html-article.html">
-            <li>HTML Article Structure</li>
-          </a>
-          <a href="html-img.html">
-            <li>HTML Image</li>
-          </a>
-          <a href="html-hyperlink.html">
-            <li>HTML Hyperlink</li>
-          </a>
-          <a href="html-list.html">
-            <li>HTML List</li>
-          </a>
-          <a href="html-formatting.html">
-            <li>HTML Formatting</li>
-          </a>
-          <a href="html-attributes.html">
-            <li>HTML Attributes</li>
-          </a>
-          <a href="beginner-quiz.html">
-            <li>Unit Quiz</li>
-          </a>
-          <br />
-          <h2>HTML Advanced</h2>
-
-          <a href="html-forms.html">
-            <li>HTML Forms</li>
-          </a>
-          <a href="html-semantics.html">
-            <li>HTML Semantics</li>
-          </a>
-          <a href="html-special-characters.html">
-            <li>HTML Special Characters</li>
-          </a>
+          <h2>HTML Visuals</h2>
           <a href="html-tables.html">
             <li>HTML Tables</li>
           </a>
           <a href="html-multimedia.html">
             <li>HTML Multimedia</li>
-          </a>
-          <a href="html-meta.html" style="font-weight: bold; color: rgb(89, 137, 227)">
-            <li>HTML Meta Tag</li>
           </a>
           <a href="html-embed.html">
             <li>HTML Embed</li>
@@ -144,9 +96,38 @@
           <a href="html-svg.html">
             <li>HTML SVG</li>
           </a>
-          <a href="advanced-quiz.html">
+          <a href="visuals-quiz.html">
             <li>Unit Quiz</li>
-          </a><br /><br />
+          </a>
+          <h2>Efficient Code</h2>
+
+          <a href="html-semantics.html">
+            <li>HTML Semantics</li>
+          </a>
+          <a href="html-special-characters.html">
+            <li>HTML Special Characters</li>
+          </a>
+          <a href="efficient-quiz.html">
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Handling Users</h2>
+          <a href="html-forms.html">
+            <li>HTML Forms</li>
+          </a>
+          <a
+            href="html-meta.html"
+            style="font-weight: bold; color: rgb(89, 137, 227)"
+          >
+            <li>HTML Meta Tag</li>
+          </a>
+          <a href="user-quiz.html">
+            <li>Unit Quiz</li>
+          </a>
+          <br />
+          <div class="sidebtns">
+            <a href="what-is-coding.html" class="sidebtn">Back</a>
+            <a href="finish.html" class="sidebtn">Next</a>
+          </div>
         </ul>
       </div>
       <div class="tbar" id="tbar">
@@ -165,7 +146,9 @@
           </div>
         </div>
         <h1>HTML Meta Tag</h1>
-        <h3 class="author">By Tony <!--<span class="date">2023.11.29</span>
+        <h3 class="author">
+          By Tony
+          <!--<span class="date">2023.11.29</span>
           <span style="padding-inline: 10px">•</span> Last updated-->
           <span class="date">2.19.2024</span>
           <div class="icons">
@@ -190,7 +173,14 @@
           </div>
         </h3>
         <hr />
-        <p>How are users supposed to get to your website if they can't even find it? Meta tags provide additional information, or metadata, to the browser, search engine, and other machines. They make your website show up on the search engine, they also show additional information, description, and image for the website in social media posts, messages, and more.</p>
+        <p>
+          How are users supposed to get to your website if they can't even find
+          it? Meta tags provide additional information, or metadata, to the
+          browser, search engine, and other machines. They make your website
+          show up on the search engine, they also show additional information,
+          description, and image for the website in social media posts,
+          messages, and more.
+        </p>
         <div class="example">
           <textarea
             id="html"
@@ -213,13 +203,30 @@
           </script>
         </div>
         <p>
-          There are 5 different meta tags in the above example. The first one, charset meta tag, tells the browser this webpage's character set is UTF-8, so the browser can display the unicode characters correctly. The second one, description meta tag, has the description as the name attribute and the actual description of the page within the content attribute. The same rule applies to the author and the keywords metatags. Last but not least, the viewport meta tag tells the browser how to display the web page on different sizes of screens, so the page is always optimized and doesn't look bad no matter what the device is. The code example doesn't have an output because all meta tags are located in the head tags, where information isn't visible. 
+          There are 5 different meta tags in the above example. The first one,
+          charset meta tag, tells the browser this webpage's character set is
+          UTF-8, so the browser can display the unicode characters correctly.
+          The second one, description meta tag, has the description as the name
+          attribute and the actual description of the page within the content
+          attribute. The same rule applies to the author and the keywords
+          metatags. Last but not least, the viewport meta tag tells the browser
+          how to display the web page on different sizes of screens, so the page
+          is always optimized and doesn't look bad no matter what the device is.
+          The code example doesn't have an output because all meta tags are
+          located in the head tags, where information isn't visible.
         </p>
-        <p>In conclusion, meta tags provide the browser more information about the page so users can browse it better. They also provide search engine bots a short description about the page to help them index it, so your page can actually show up when using a search engine to search your site. Other than that, there are still more uses of meta tags on a web page, so remember to check out our references or other resources for more info!</p>
+        <p>
+          In conclusion, meta tags provide the browser more information about
+          the page so users can browse it better. They also provide search
+          engine bots a short description about the page to help them index it,
+          so your page can actually show up when using a search engine to search
+          your site. Other than that, there are still more uses of meta tags on
+          a web page, so remember to check out our references or other resources
+          for more info!
+        </p>
         <div class="buttons">
-          
-        <button id="prevButton" class="button">Back</button>
-        <button id="myButton" class="button">Next</button>
+          <button id="prevButton" class="button">Back</button>
+          <button id="myButton" class="button">Next</button>
           <script>
             document
               .getElementById("myButton")

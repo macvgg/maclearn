@@ -83,63 +83,12 @@
     <div class="wrapper side-wrapper">
       <div class="sidebar side">
         <ul style="list-style-type: none">
-          <h2>HTML Basics</h2>
-          <a href="What-is-coding.html">
-            <li>What Is Coding?</li>
-          </a>
-          <a href="what-is-html.html">
-            <li>What Is HTML?</li>
-          </a>
-          <a href="more-html-tags.html">
-            <li>More HTML Tags!</li>
-          </a>
-          <a href="html-basic-structure.html">
-            <li>HTML Basic Structure</li>
-          </a>
-          <a href="html-article.html">
-            <li>HTML Article Structure</li>
-          </a>
-          <a href="html-img.html">
-            <li>HTML Image</li>
-          </a>
-          <a href="html-hyperlink.html">
-            <li>HTML Hyperlink</li>
-          </a>
-          <a href="html-list.html">
-            <li>HTML List</li>
-          </a>
-          <a href="html-formatting.html">
-            <li>HTML Formatting</li>
-          </a>
-          <a href="html-attributes.html">
-            <li>HTML Attributes</li>
-          </a>
-          <a href="beginner-quiz.html">
-            <li>Unit Quiz</li>
-          </a>
-          <br />
-          <h2>HTML Advanced</h2>
-
-          <a
-            href="html-forms.html"
-            style="font-weight: bold; color: rgb(89, 137, 227)"
-          >
-            <li>HTML Forms</li>
-          </a>
-          <a href="html-semantics.html">
-            <li>HTML Semantics</li>
-          </a>
-          <a href="html-special-characters.html">
-            <li>HTML Special Characters</li>
-          </a>
+          <h2>HTML Visuals</h2>
           <a href="html-tables.html">
             <li>HTML Tables</li>
           </a>
           <a href="html-multimedia.html">
             <li>HTML Multimedia</li>
-          </a>
-          <a href="html-meta.html">
-            <li>HTML Meta Tag</li>
           </a>
           <a href="html-embed.html">
             <li>HTML Embed</li>
@@ -147,10 +96,41 @@
           <a href="html-svg.html">
             <li>HTML SVG</li>
           </a>
-          <a href="advanced-quiz.html"> <li>Unit Quiz</li> </a
-          ><br /><br />
+          <a href="visuals-quiz.html">
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Efficient Code</h2>
+
+          <a href="html-semantics.html">
+            <li>HTML Semantics</li>
+          </a>
+          <a href="html-special-characters.html">
+            <li>HTML Special Characters</li>
+          </a>
+          <a href="efficient-quiz.html">
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Handling Users</h2>
+          <a
+            href="html-forms.html"
+            style="font-weight: bold; color: rgb(89, 137, 227)"
+          >
+            <li>HTML Forms</li>
+          </a>
+          <a href="html-meta.html">
+            <li>HTML Meta Tag</li>
+          </a>
+          <a href="user-quiz.html">
+            <li>Unit Quiz</li>
+          </a>
+          <br />
+          <div class="sidebtns">
+            <a href="what-is-coding.html" class="sidebtn">Back</a>
+            <a href="finish.html" class="sidebtn">Next</a>
+          </div>
         </ul>
       </div>
+
       <div class="tbar" id="tbar">
         <h2 class="bart">HTML Forms</h2>
         <div class="bard">2.18.2024</div>
@@ -311,22 +291,21 @@
 <option value="black">Black</option>
 <option value="white">White</option>
 </select>`;
-htmlExample2.addEventListener("input", function thing() {
-
-  const output2 =
-              document.getElementById("output2").contentWindow.document;
+            htmlExample2.addEventListener("input", function thing() {
+              const output2 =
+                document.getElementById("output2").contentWindow.document;
               output2.open();
               output2.writeln("\<body\>" + htmlExample2.value + "\<\/body\>");
               output2.close();
-});
-function thing() {
-  const output2 =
-              document.getElementById("output2").contentWindow.document;
+            });
+            function thing() {
+              const output2 =
+                document.getElementById("output2").contentWindow.document;
               output2.open();
               output2.writeln("\<body\>" + htmlExample2.value + "\<\/body\>");
               output2.close();
-};
-thing();
+            }
+            thing();
           </script>
         </div>
         <p>
