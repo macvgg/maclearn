@@ -5,11 +5,23 @@
 
 body {
   font-family: " Helvetica", sans-serif;
-  background-color: white;
+  background-color: rgb(40, 40, 40);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120%;
+  font-size: 25px;
+  text-align: center;
+  line-height: 50px;;
 }
 
 .space {
@@ -288,11 +300,11 @@ h2 {
   width: 1vw;
   background-color: gray;
   border-radius: 5vw;
-  border: 0.25vw solid white;
+  border: 0.25vw solid rgb(40, 40, 40);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(63, 63, 63);
+  background-color: rgb(163, 163, 163);
 }
 
 ::-webkit-scrollbar-track {
@@ -419,51 +431,9 @@ p code {
 }
 
 .sidebar li {
-  padding-left: 6.5%;
+  padding-left: 10%;
   font-size: 16px;
-  padding-block: 4%;
-}
-
-.sidebar ul {
-  padding-bottom: 50px !important;
-}
-
-.sidebtns {
-  display: flex;
-  width: 18vw;
-  margin-inline: 1vw;
-  margin-block: 10px;
-  position: fixed;
-  bottom: 0;
-  border-radius: 8px;
-  box-shadow: 0px 0px 15px rgb(45, 45, 45);
-}
-
-.sidebtn {
-  width: 50%;
-  cursor: pointer;
-  color: white;
-  text-align: center;
-  display: block;
-  border: none;
-  background-color: rgb(20, 20, 20);
-  outline: none;
-  padding-block: 8px;
-  font-size: 18px;
-  border-radius: 8px 0px 0px 8px;
-  transition: background-color 0.3s ease;
-}
-
-.sidebtn:last-child {
-  border-radius: 0px 8px 8px 0px;
-}
-
-.sidebtn:hover {
-  background-color: rgb(10, 10, 10);
-}
-
-.sidebtn:active {
-  background-color: black;
+  padding-block: 5%;
 }
 
 .sidebar a {
@@ -477,15 +447,9 @@ p code {
 }
 
 .sidebar h2 {
-  padding-block: 3% !important;
-  font-size: 22px;
+  padding-top: 5% !important;
+  font-size: 25px;
   margin-block: 10px;
-  text-align: left;
-  padding-left: 6.5%;
-}
-
-.sidebar h2:first-child {
-  padding-top: 7% !important;
 }
 
 .side-wrapper {
@@ -685,6 +649,125 @@ p code {
 .icon:hover {
   transform: scale(1.2);
 }
+* {
+  box-sizing: border-box;
+}
+
+.flex {
+  width: 70%;
+  margin-right: 5%;
+  margin-left: 25%;
+  display: flex;
+  height: 60vh;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  padding-inline: 30px;
+  border-radius: 10px;
+  color: white;
+}
+
+.btn-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: none;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.15s ease;
+  text-align: left;
+  border-radius: 10px;
+}
+
+label {
+  display: inline-block;
+  width: 90%;
+  padding-block: 15px;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  display: inline-block;
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  border: 2px solid white;
+  margin-inline: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: white;
+}
+input[type="radio"]:checked::before {
+  transform: scale(0.5);
+}
+
+.btn:hover {
+  background-color: rgb(30, 30, 30) ;
+}
+
+.start-btn,
+.next-btn {
+  width: 100%;
+  font-size: 20px;
+  padding-block: 10px;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-block: 20px;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#question {
+  font-size: 30px;
+  padding-block: 40px;
+}
+
+#thing {
+  font-size: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+.sentence {
+  display: block;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  text-align: center;
+}
+
+#message {
+  font-size: 25px;
+  padding: 25px;
+}
 
 .bard {
   color: white;
@@ -698,18 +781,90 @@ p code {
   transform: translateY(0);
 }
 
-@media (width < 600px) {
-  .sidebar {
-    display: none !important;
-  }
+.sidebar {
+  width: 20%;
+  float: left;
+  background-color: rgb(30, 30, 30);
+  color: white;
+}
 
-  .article {
-    width: 80%;
-    margin-inline: 10%;
-  }
-  .tbar {
-    width: 100%;
-    margin: 0;
-    left: 0 !important;
-  }
+.article {
+  width: 60%;
+  margin-right: 10%;
+  margin-left: 30%;
+  float: right;
+}
+
+.sidebar li {
+  padding-left: 6.5%;
+  font-size: 16px;
+  padding-block: 4%;
+}
+
+.sidebar ul {
+  padding-bottom: 50px !important;
+}
+
+.sidebtns {
+  display: flex;
+  width: 18vw;
+  margin-inline: 1vw;
+  margin-block: 10px;
+  position: fixed;
+  bottom: 0;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgb(45, 45, 45);
+}
+
+.sidebtn {
+  width: 50%;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  display: block;
+  border: none;
+  background-color: rgb(20, 20, 20);
+  outline: none;
+  padding-block: 8px;
+  font-size: 18px;
+  border-radius: 8px 0px 0px 8px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebtn:last-child {
+  border-radius: 0px 8px 8px 0px;
+}
+
+.sidebtn:hover {
+  background-color: rgb(10, 10, 10);
+}
+
+.sidebtn:active {
+  background-color: black;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar li:hover {
+  background-color: rgb(38, 38, 38);
+}
+
+.sidebar h2 {
+  padding-block: 3% !important;
+  font-size: 22px;
+  margin-block: 10px;
+  text-align: left;
+  padding-left: 6.5%;
+}
+
+.sidebar h2:first-child {
+  padding-top: 7% !important;
+}
+
+.side-wrapper {
+  display: flex;
 }

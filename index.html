@@ -77,17 +77,17 @@
     </nav>
     <div class="announce">
       <h2>
-        HUGE UPDATES to MacLearn! Check out the 
-        <a href="/macblog/updates/maclearn/2024/march.html" target="_blank"
-          >MacLearn March Update</a
+        The
+        <a href="/macblog/updates/maclearn/2024/july.html" target="_blank"
+          >MacLearn July Update</a
         >
-        📖!
+        is here! Check out what's new 🔥!
         <img src="xmark-solid.svg" alt="Close" id="closea" />
       </h2>
     </div>
     <script>
       let clos = document.getElementById("closea");
-      if (localStorage.getItem("maclearnclosee")) {
+      if (localStorage.getItem("maclearncloseee")) {
         clos.parentElement.parentElement.style.display = "none";
       }
     </script>
@@ -103,11 +103,15 @@
       <div class="title">Welcome to MacLearn!</div>
       <div class="sub">Learn anything, for free.</div>
     </div>
-    <div class="containers">
-      <div class="wrap">
-        <a href="coding/html/what-is-coding.html" class="card" data-tilt>
-          <img src="images/html.png" alt="MacWeb Logo" />
-          <h2 class="title" style="display: flex; align-items: center; justify-content: center;">HTML <span
+    <div class="wrap">
+      <a href="coding/html/" class="card" data-tilt>
+        <img src="images/html.png" alt="MacWeb Logo" />
+        <h2
+          class="title"
+          style="display: flex; align-items: center; justify-content: center"
+        >
+          HTML
+          <span
             style="
               text-align: center;
               display: inline-block;
@@ -118,48 +122,60 @@
               font-size: 15px;
               font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
                 sans-serif;
-                padding-block: 5px;
+              padding-block: 5px;
               border-radius: 5px;
               font-weight: bold;
               position: absolute;
               right: 50px;
             "
             >Beta</span
-          ></h2>
-          <p class="des">
-            <b>Learn</b> HTML, the language that constructs the
-            structure and content of a website.
-          </p>
-        </a>
-        <a href="" class="card" data-tilt>
-          <img src="images/css.png" alt="MacWeb Logo" />
-          <h2 class="title" style="display: flex; align-items: center; justify-content: center;">CSS <span
+          >
+        </h2>
+        <p class="des">
+          <b>Learn</b> HTML, the language that constructs the structure and
+          content of a website.
+        </p>
+      </a>
+      <a href="coding/css/" class="card" data-tilt>
+        <img src="images/css.png" alt="MacWeb Logo" />
+        <h2
+          class="title"
+          style="display: flex; align-items: center; justify-content: center"
+        >
+          CSS
+          <span
             style="
               text-align: center;
               display: inline-block;
-              background-color: rgb(80, 80, 80);
+              background-color: black;
               color: white;
-              width: 100px;
+              width: 50px;
               margin-left: 15px;
               font-size: 15px;
               font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
                 sans-serif;
-                padding-block: 5px;
+              padding-block: 5px;
               border-radius: 5px;
               font-weight: bold;
               position: absolute;
-              right: 10px;
+              right: 50px;
             "
-            >Coming 2024</span
-          ></h2>
-          <p class="des">
-            <b>Master</b> CSS, the language that styles a website's looks and
-            appearance.
-          </p>
-        </a>
-        <a href="" class="card" data-tilt>
-          <img src="images/js.png" alt="MacWeb Logo" />
-          <h2 class="title" style="display: flex; align-items: center; justify-content: center;">JavaScript<br> <span
+            >Beta</span
+          >
+        </h2>
+        <p class="des">
+          <b>Master</b> CSS, the language that styles a website's looks and
+          appearance.
+        </p>
+      </a>
+      <a href="coding/js/" class="card" data-tilt>
+        <img src="images/js.png" alt="MacWeb Logo" />
+        <h2
+          class="title"
+          style="display: flex; align-items: center; justify-content: center"
+        >
+          JavaScript<br />
+          <span
             style="
               text-align: center;
               display: inline-block;
@@ -170,48 +186,84 @@
               font-size: 13px;
               font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
                 sans-serif;
-                padding-block: 5px;
+              padding-block: 5px;
               border-radius: 5px;
               font-weight: bold;
               position: absolute;
               right: 0px;
             "
             >Coming 2025</span
-          ></h2>
-          <p class="des">
-            <b>Explore</b> JavaScript, the language for all the interactivity
-            and functionailty of a website.
-          </p>
-        </a>
-      </div>
-    </div>
-    <div class="references" style="background-color: rgb(224, 224, 224)">
-      <div class="coursepr">
-        <h2>References</h2>
-        <p id="htmlp">
+          >
+        </h2>
+        <p class="des">
+          <b>Explore</b> JavaScript, the language for all the interactivity and
+          functionailty of a website.
+        </p>
+      </a>
+      <a href="coding/references/" class="card" data-tilt>
+        <img src="images/reference/r5.jpg" alt="MacWeb Logo" />
+        <h2
+          class="title"
+          style="display: flex; align-items: center; justify-content: center"
+        >
+          References<br />
           <span
             style="
               text-align: center;
-              display: block;
+              display: inline-block;
               background-color: black;
               color: white;
-              width: 40%;
-              margin-inline: 30%;
+              width: 50px;
+              margin-left: 15px;
+              font-size: 15px;
               font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
                 sans-serif;
-              border-radius: 10px;
+              padding-block: 5px;
+              border-radius: 5px;
               font-weight: bold;
+              position: absolute;
+              right: 20px;
             "
-            >Beta Course</span
-          ><br />
-          Check out our complete reference for web development, including HTML
-          tags, CSS values, JavaScript functions, developer's guide, and more!
+            >Beta</span
+          >
+        </h2>
+        <p class="des">
+          <b>Check</b> our references for info on HTML tags, CSS values,
+          JavaScript syntax, and more!
         </p>
-        <a href="/maclearn/coding/references/"><button>Explore now!</button></a>
-      </div>
-      <div class="courseimgr">
-        <img src="/maclearn/images/reference/img2.jpg" alt="HTML" />
-      </div>
+      </a>
+      <a href="coding/playground/" class="card" data-tilt>
+        <img src="images/reference/r1.png" alt="MacWeb Logo" />
+        <h2
+          class="title"
+          style="display: flex; align-items: center; justify-content: center"
+        >
+          Playground<br />
+          <span
+            style="
+              text-align: center;
+              display: inline-block;
+              background-color: black;
+              color: white;
+              width: 50px;
+              margin-left: 15px;
+              font-size: 15px;
+              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                sans-serif;
+              padding-block: 5px;
+              border-radius: 5px;
+              font-weight: bold;
+              position: absolute;
+              right: 20px;
+            "
+            >Beta</span
+          >
+        </h2>
+        <p class="des">
+          <b>Apply</b> the web development skills you just learned to the
+          playground and see the output!
+        </p>
+      </a>
     </div>
     <footer class="footer">
       <div>

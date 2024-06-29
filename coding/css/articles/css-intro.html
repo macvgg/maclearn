@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HTML Multimedia | MacLearn</title>
-    <link href="style.css" rel="stylesheet" />
+    <title>CSS Intro | MacLearn</title>
+    <link href="../style.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
     <script
       type="text/javascript"
       src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
       async="async"
     ></script>
-    <name id="page" data="html-multimedia"></name>
+    <name id="page" data="css-article"></name>
   </head>
   <body>
     <nav class="nav">
@@ -83,58 +83,70 @@
     <div class="wrapper side-wrapper">
       <div class="sidebar side">
         <ul style="list-style-type: none">
-          <h2>HTML Visuals</h2>
-          <a href="html-tables.html">
-            <li>HTML Tables</li>
-          </a>
+          <h2>Meeting CSS</h2>
           <a
-            href="html-multimedia.html"
+            href="css-intro.html"
             style="font-weight: bold; color: rgb(89, 137, 227)"
           >
-            <li>HTML Multimedia</li>
+            <li>CSS Intro</li>
           </a>
-          <a href="html-embed.html">
-            <li>HTML Embed</li>
+          <a href="adding-css.html">
+            <li>Adding CSS</li>
           </a>
-          <a href="html-svg.html">
-            <li>HTML SVG</li>
-          </a>
-          <a href="visuals-quiz.html">
+          <a href="quiz-meeting.html">
             <li>Unit Quiz</li>
           </a>
-          <h2>Efficient Code</h2>
-
-          <a href="html-semantics.html">
-            <li>HTML Semantics</li>
+          <h2>Colors & Borders</h2>
+          <a href="css-colors.html">
+            <li>CSS Colors</li>
           </a>
-          <a href="html-special-characters.html">
-            <li>HTML Special Characters</li>
+          <a href="css-background.html">
+            <li>CSS Background</li>
           </a>
-          <a href="efficient-quiz.html">
+          <a href="css-borders.html">
+            <li>CSS Borders</li>
+          </a>
+          <a href="quiz-colors.html">
             <li>Unit Quiz</li>
           </a>
-          <h2>Handling Users</h2>
-          <a href="html-forms.html">
-            <li>HTML Forms</li>
+          <h2>Adding Space</h2>
+          <a href="css-width-height.html">
+            <li>CSS Width & Height</li>
           </a>
-          <a href="html-meta.html">
-            <li>HTML Meta Tag</li>
+          <a href="css-padding-margin.html">
+            <li>CSS Padding & Margin</li>
           </a>
-          <a href="user-quiz.html">
+          <a href="css-box-model.html">
+            <li>CSS Box Model</li>
+          </a>
+          <a href="quiz-space.html">
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Text & Content</h2>
+          <a href="css-font.html">
+            <li>CSS Font</li>
+          </a>
+          <a href="css-text.html">
+            <li>CSS Text</li>
+          </a>
+          <a href="css-align.html">
+            <li>CSS Align</li>
+          </a>
+          <a href="quiz-content.html">
             <li>Unit Quiz</li>
           </a>
           <br />
           <div class="sidebtns">
-            <a href="what-is-coding.html" class="sidebtn">Back</a>
-            <a href="finish.html" class="sidebtn">Next</a>
+            <a href="/maclearn/" class="sidebtn">Back</a>
+            <a href="" class="sidebtn">Next</a>
           </div>
         </ul>
       </div>
       <div class="tbar" id="tbar">
-        <h2 class="bart">HTML Multimedia</h2>
-        <div class="bard">2.18.2024</div>
+        <h2 class="bart">CSS Intro</h2>
+        <div class="bard">6.7.2024</div>
       </div>
-      <script src="app.js"></script>
+      <script src="../app.js"></script>
       <article class="article">
         <div class="entire">
           <div class="sharepanel">
@@ -145,12 +157,12 @@
             </div>
           </div>
         </div>
-        <h1>HTML Multimedia</h1>
+        <h1>CSS Intro</h1>
         <h3 class="author">
           By Tony
-          <!--<span class="date">2023.5.26</span>
+          <!--<span class="date">2024.6.7</span>
           <span style="padding-inline: 10px">•</span> Last updated-->
-          <span class="date">2.18.2024</span>
+          <span class="date">6.7.2024</span>
           <div class="icons">
             <img
               src="/maclearn/icons/star-regular.svg"
@@ -174,17 +186,74 @@
         </h3>
         <hr />
         <p>
-          Without multimedia, a webpage would just be a bunch of boring text.
-          Multimedia includes images📊, videos📸, audio🔊, and music🎵. These
-          elements are dynamic and they make a webpage more interesting and easy
-          to visualize and understand.
+          Congratulations! You've made it to the MacLearn CSS Course! You've
+          learned a lot from the HTML course and you're getting closer and
+          closer to being an expert in web development! With HTML, you can build
+          your website's content, and now, with CSS's help, you can make your
+          website look more visually appealing!
+        </p>
+        <p>
+          So what's CSS, actually? CSS, or Cascading Style Sheet, is a markup
+          language used in web development along side HTML, and it's responsible
+          for the styling and the layout of a website, such as the colors, the
+          positioning of the elements, the font size, even gradients and
+          animations, and so, so much more. Basically, CSS turns your website
+          from plain text and content into a visually appealing interface by
+          defining the layouts and the designs of the elements.
+        </p>
+        <img
+          src="../media/selector.png"
+          style="border-radius: 10px; width: 40%; margin-inline: 30%"
+        />
+        <p>
+          Here's an image explaining CSS's syntax, or the "grammar" for coding
+          languages. Let's say you want to apply some CSS code to a &lt;h1&gt;
+          element to make it red.
+        </p>
+        <ol>
+          <li>
+            First, you need to select that &lt;h1&gt; with CSS, otherwise it
+            won't know which element you want to style. This is done by directly
+            typing out the element without the &lt; or the &gt;. This is the
+            "selector".
+          </li>
+          <code class="code">h1</code>
+          <li>
+            Then, leave a space and type two curly brackets {} after the
+            selector. The brackets will contain all the CSS code for the
+            &lt;h1&gt; element.
+          </li>
+          <code class="code">h1 {}</code>
+          <li>
+            To change the color, you need to use the CSS property "color". After
+            the property, add a colon, and then the value "red". This tells CSS
+            to make the &lt;h1&gt; text red.
+          </li>
+          <code class="code">color: red</code>
+          <li>
+            Finally, close off the rule, or property-value pair, with a semi
+            colon (;) and make sure the rule is inside the curly brackets.
+          </li>
+          <code class="code">
+            <pre>
+h1 {
+  color: red;
+}</pre
+            >
+          </code>
+        </ol>
+        <p>
+          Good job, you just learned your first line of CSS and the basic syntax
+          for it! See the below example for the output of the code.
         </p>
         <div class="example">
-          <textarea
+          <textarea id="css" class="html-example" placeholder="CSS"></textarea>
+          <input
+            type="text"
             id="html"
-            class="html-example"
-            placeholder="HTML"
-          ></textarea>
+            style="display: none"
+            value="<h1>A Heading</h1>"
+          />
           <iframe
             class="iframe-example"
             id="output"
@@ -192,49 +261,30 @@
             sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
           ></iframe>
           <script>
-            const htmlExample = document.getElementById("html");
-            htmlExample.value = `<video width="220px" controls>
-<source src="video.mp4" type="video/mp4">
-Your browser does not support this media format.
-</video>
-<audio controls>
-<source src="audio.mp3" type="audio/mp3">
-Your browser does not support this media format.
-</audio>
-<img src="img.png" width="150px" alt="An image"> `;
+            const cssExample = document.getElementById("css");
+            cssExample.value = `h1 {
+  color: red;
+} `;
           </script>
         </div>
-        <span style="font-size: 17px"
-          ><i
-            >Note: Video downloaded
-            <a
-              href="https://www.videezy.com/technology/5654-4k-stock-video-of-typing-on-laptop"
-              target="_blank"
-              >here</a
-            >, no copyright. Audio downloaded from
-            <a href="https://ncs.io/energy" target="_blank">NCS</a>,
-            Elektronomia - Energy.</i
-          ></span
-        >
-        <p>
-          In the &ltvideo> tags, we added the &ltsource> tags with the src
-          attribute to link and display the video. Two &ltsource> tags are used
-          because the browser may not recognize the first file type (the type
-          attribute), but it can display the next recognized source. If none is
-          recognized, the browser displays the text within the &ltvideo> tags.
-          The &ltvideo> tags have the controls attribute so users can actually
-          control the video. &ltaudio> tags are the same, but the width
-          attribute cannot be used for styling. We already learned about
-          &ltimg&gt tag
-          <a href="html-img.html">here</a>. Output of the example:
-        </p>
-        <p>
-          So that's all about HTML multimedia. Always remeber to put source tags
-          with the src attribute that links to the source so the browser knows
-          which file you're trying to display. Multimedia is always fun to play
-          and explore with, so have fun!
-        </p>
 
+        <p>Here are some very important CSS concepts to keep in mind:</p>
+        <ul>
+          <li>
+            Selector: Tells CSS which HTML element to style (h1 in this case).
+          </li>
+          <li>
+            Property: What you want to change, or style, about the element
+            (color).
+          </li>
+          <li>Value: What you want to change the property to (red).</li>
+        </ul>
+        <p>
+          The above example is just a sneak peek of what CSS can do. Feel free
+          to play around with it to see what happens, and click on the Next
+          button to move on and start learning more CSS rules and master the
+          power of CSS!
+        </p>
         <div class="buttons">
           <button id="prevButton" class="button">Back</button>
           <button id="myButton" class="button">Next</button>
@@ -242,12 +292,12 @@ Your browser does not support this media format.
             document
               .getElementById("myButton")
               .addEventListener("click", function () {
-                window.location.href = "html-embed.html";
+                window.location.href = "adding-css.html";
               });
             document
               .getElementById("prevButton")
               .addEventListener("click", function () {
-                window.location.href = "html-tables.html";
+                window.location.href = "/maclearn/coding/css/";
               });
           </script>
         </div>

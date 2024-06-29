@@ -1,15 +1,16 @@
+<!--TODO: introduce border width, color, style, border radius, and outline-->
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HTML Multimedia | MacLearn</title>
-    <link href="style.css" rel="stylesheet" />
+    <title>CSS Width & Height | MacLearn</title>
+    <link href="../style.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
     <script
       type="text/javascript"
       src="https://platform-api.sharethis.com/js/sharethis.js#property=65cd44253625b4001a8bd058&product=inline-share-buttons&source=platform"
       async="async"
     ></script>
-    <name id="page" data="html-multimedia"></name>
+    <name id="page" data="css-article"></name>
   </head>
   <body>
     <nav class="nav">
@@ -83,58 +84,70 @@
     <div class="wrapper side-wrapper">
       <div class="sidebar side">
         <ul style="list-style-type: none">
-          <h2>HTML Visuals</h2>
-          <a href="html-tables.html">
-            <li>HTML Tables</li>
+          <h2>Meeting CSS</h2>
+          <a href="css-intro.html">
+            <li>CSS Intro</li>
           </a>
+          <a href="adding-css.html">
+            <li>Adding CSS</li>
+          </a>
+          <a href="quiz-meeting.html">
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Colors & Borders</h2>
+          <a href="css-colors.html">
+            <li>CSS Colors</li>
+          </a>
+          <a href="css-background.html">
+            <li>CSS Background</li>
+          </a>
+          <a href="css-borders.html">
+            <li>CSS Borders</li>
+          </a>
+          <a href="quiz-colors.html">
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Adding Space</h2>
           <a
-            href="html-multimedia.html"
+            href="css-width-height.html"
             style="font-weight: bold; color: rgb(89, 137, 227)"
           >
-            <li>HTML Multimedia</li>
+            <li>CSS Width & Height</li>
           </a>
-          <a href="html-embed.html">
-            <li>HTML Embed</li>
+          <a href="css-padding-margin.html">
+            <li>CSS Padding & Margin</li>
           </a>
-          <a href="html-svg.html">
-            <li>HTML SVG</li>
+          <a href="css-box-model.html">
+            <li>CSS Box Model</li>
           </a>
-          <a href="visuals-quiz.html">
+          <a href="quiz-space.html">
             <li>Unit Quiz</li>
           </a>
-          <h2>Efficient Code</h2>
-
-          <a href="html-semantics.html">
-            <li>HTML Semantics</li>
+          <h2>Text & Content</h2>
+          <a href="css-font.html">
+            <li>CSS Font</li>
           </a>
-          <a href="html-special-characters.html">
-            <li>HTML Special Characters</li>
+          <a href="css-text.html">
+            <li>CSS Text</li>
           </a>
-          <a href="efficient-quiz.html">
-            <li>Unit Quiz</li>
+          <a href="css-align.html">
+            <li>CSS Align</li>
           </a>
-          <h2>Handling Users</h2>
-          <a href="html-forms.html">
-            <li>HTML Forms</li>
-          </a>
-          <a href="html-meta.html">
-            <li>HTML Meta Tag</li>
-          </a>
-          <a href="user-quiz.html">
+          <a href="quiz-content.html">
             <li>Unit Quiz</li>
           </a>
           <br />
           <div class="sidebtns">
-            <a href="what-is-coding.html" class="sidebtn">Back</a>
-            <a href="finish.html" class="sidebtn">Next</a>
+            <a href="/maclearn/" class="sidebtn">Back</a>
+            <a href="" class="sidebtn">Next</a>
           </div>
         </ul>
       </div>
       <div class="tbar" id="tbar">
-        <h2 class="bart">HTML Multimedia</h2>
-        <div class="bard">2.18.2024</div>
+        <h2 class="bart">CSS Width & Height</h2>
+        <div class="bard">6.12.2024</div>
       </div>
-      <script src="app.js"></script>
+      <script src="../app.js"></script>
       <article class="article">
         <div class="entire">
           <div class="sharepanel">
@@ -145,12 +158,12 @@
             </div>
           </div>
         </div>
-        <h1>HTML Multimedia</h1>
+        <h1>CSS Width & Height</h1>
         <h3 class="author">
           By Tony
-          <!--<span class="date">2023.5.26</span>
+          <!--<span class="date">2024.6.7</span>
           <span style="padding-inline: 10px">•</span> Last updated-->
-          <span class="date">2.18.2024</span>
+          <span class="date">6.12.2024</span>
           <div class="icons">
             <img
               src="/maclearn/icons/star-regular.svg"
@@ -174,17 +187,31 @@
         </h3>
         <hr />
         <p>
-          Without multimedia, a webpage would just be a bunch of boring text.
-          Multimedia includes images📊, videos📸, audio🔊, and music🎵. These
-          elements are dynamic and they make a webpage more interesting and easy
-          to visualize and understand.
+          One of the most important aspects of web design and CSS is the sizing
+          of the elements. The width, height, and white space helps a lot when
+          creating websites that look simple and good and have great
+          readability. Today, we'll learn how to change the width and height of
+          an element using CSS.
+        </p>
+        <code class="code">width: 100px;<br />height: 100px;</code>
+        <p>
+          First up, we have the "width" CSS property that tells the browser how
+          wide the element is. Here, that value is 100px, which means 100
+          pixels. "px" is a fixed amount of unit when you're measuring length in
+          CSS and is very commonly used. To change the height of the element,
+          use the "height" CSS property, which tells the browser how tall the
+          element is. Here, we also used the "px" unit so the width and the
+          height of the element are the same. Here's the result (we added a
+          background to visualize):
         </p>
         <div class="example">
-          <textarea
+          <textarea id="css" class="html-example" placeholder="CSS"></textarea>
+          <input
+            type="text"
             id="html"
-            class="html-example"
-            placeholder="HTML"
-          ></textarea>
+            style="display: none"
+            value="<div>I'm 100 pixels tall and 100 pixels wide</div><p>I'm shorter but wider</p>"
+          />
           <iframe
             class="iframe-example"
             id="output"
@@ -192,49 +219,45 @@
             sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
           ></iframe>
           <script>
-            const htmlExample = document.getElementById("html");
-            htmlExample.value = `<video width="220px" controls>
-<source src="video.mp4" type="video/mp4">
-Your browser does not support this media format.
-</video>
-<audio controls>
-<source src="audio.mp3" type="audio/mp3">
-Your browser does not support this media format.
-</audio>
-<img src="img.png" width="150px" alt="An image"> `;
+            const cssExample = document.getElementById("css");
+            cssExample.value = `div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+  
+p {
+  width: 200px;
+  height: 50px;
+  background-color: lightgreen;
+}`;
           </script>
         </div>
-        <span style="font-size: 17px"
-          ><i
-            >Note: Video downloaded
-            <a
-              href="https://www.videezy.com/technology/5654-4k-stock-video-of-typing-on-laptop"
-              target="_blank"
-              >here</a
-            >, no copyright. Audio downloaded from
-            <a href="https://ncs.io/energy" target="_blank">NCS</a>,
-            Elektronomia - Energy.</i
-          ></span
-        >
         <p>
-          In the &ltvideo> tags, we added the &ltsource> tags with the src
-          attribute to link and display the video. Two &ltsource> tags are used
-          because the browser may not recognize the first file type (the type
-          attribute), but it can display the next recognized source. If none is
-          recognized, the browser displays the text within the &ltvideo> tags.
-          The &ltvideo> tags have the controls attribute so users can actually
-          control the video. &ltaudio> tags are the same, but the width
-          attribute cannot be used for styling. We already learned about
-          &ltimg&gt tag
-          <a href="html-img.html">here</a>. Output of the example:
+          As you see in the example above, the element's size changes with the
+          width & height properties. They can be used without each other but
+          most of the time they're used together to set the size. If you don't
+          set anything, the element's gonna shrink to the smallest size that
+          fits the text and content inside the elemtent. If you want multiple
+          elements to have the same size, definitely use the width & height
+          properties.
+        </p>
+        <code class="code">width: 100vw;<br />height: 100vh;</code>
+        <p>
+          Above is another way to set your element's size. We used "px" for the
+          unit previously, but this time, we used the "vw" and "vh" units for
+          the length. "vw" stands for viewport width and "vh" is viewport
+          height. 100vw means 100% of the screen's width, and 100vh means 100%
+          of the screen's height. In this example, the viewport is the output
+          box, so if you paste the code into the example, you'll see the element
+          enlarges to 100% of the output box's size.
         </p>
         <p>
-          So that's all about HTML multimedia. Always remeber to put source tags
-          with the src attribute that links to the source so the browser knows
-          which file you're trying to display. Multimedia is always fun to play
-          and explore with, so have fun!
+          If you paste the code in correctly, you'll probably notice that
+          there's some white space outside of the boxes even though you set the
+          size to 100%. We'll explore more about that white space in the next
+          tutorial, so click Next and continue learning more CSS!
         </p>
-
         <div class="buttons">
           <button id="prevButton" class="button">Back</button>
           <button id="myButton" class="button">Next</button>
@@ -242,12 +265,12 @@ Your browser does not support this media format.
             document
               .getElementById("myButton")
               .addEventListener("click", function () {
-                window.location.href = "html-embed.html";
+                window.location.href = "css-padding-margin.html";
               });
             document
               .getElementById("prevButton")
               .addEventListener("click", function () {
-                window.location.href = "html-tables.html";
+                window.location.href = "quiz-colors.html";
               });
           </script>
         </div>
@@ -266,3 +289,5 @@ Your browser does not support this media format.
     </div>
   </body>
 </html>
+
+<!--TODO: introduce width and height and vh, vw-->

@@ -100,16 +100,16 @@ h1 {
 .article p {
   padding: 20px;
   padding-inline: 0;
-  font-size: 21px;
+  font-size: 20px;
   color: rgb(215, 215, 215);
-  line-height: 35px;
+  line-height: 30px;
 }
 
 .article ul,
 ol {
   padding-inline: 5%;
-  font-size: 23px;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 30px;
   color: rgb(215, 215, 215);
 }
 

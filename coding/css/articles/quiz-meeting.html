@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HTML Efficient Code Quiz | MacLearn</title>
-    <link href="style.css" rel="stylesheet" />
+    <title>Meeting CSS Quiz | MacLearn</title>
+    <link href="../quiz.css" rel="stylesheet" />
     <link href="/maclearn/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="quiz.css" />
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
   </head>
   <body>
@@ -79,76 +78,64 @@
     <div class="wrapper side-wrapper">
       <div class="sidebar side">
         <ul style="list-style-type: none">
-          <h2>HTML Visuals</h2>
-          <a href="html-tables.html">
-            <li>HTML Tables</li>
+          <h2>Meeting CSS</h2>
+          <a href="css-intro.html">
+            <li>CSS Intro</li>
           </a>
-          <a href="html-multimedia.html">
-            <li>HTML Multimedia</li>
-          </a>
-          <a href="html-embed.html">
-            <li>HTML Embed</li>
-          </a>
-          <a href="html-svg.html">
-            <li>HTML SVG</li>
-          </a>
-          <a href="visuals-quiz.html">
-            <li>Unit Quiz</li>
-          </a>
-          <h2>Efficient Code</h2>
-
-          <a href="html-semantics.html">
-            <li>HTML Semantics</li>
-          </a>
-          <a href="html-special-characters.html">
-            <li>HTML Special Characters</li>
+          <a href="adding-css.html">
+            <li>Adding CSS</li>
           </a>
           <a
-            href="efficient-quiz.html"
+            href="quiz-meeting.html"
             style="font-weight: bold; color: rgb(89, 137, 227)"
           >
             <li>Unit Quiz</li>
           </a>
-          <h2>Handling Users</h2>
-          <a href="html-forms.html">
-            <li>HTML Forms</li>
+          <h2>Colors & Borders</h2>
+          <a href="css-colors.html">
+            <li>CSS Colors</li>
           </a>
-          <a href="html-meta.html">
-            <li>HTML Meta Tag</li>
+          <a href="css-background.html">
+            <li>CSS Background</li>
           </a>
-          <a href="user-quiz.html">
+          <a href="css-borders.html">
+            <li>CSS Borders</li>
+          </a>
+          <a href="quiz-colors.html">
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Adding Space</h2>
+          <a href="css-width-height.html">
+            <li>CSS Width & Height</li>
+          </a>
+          <a href="css-padding-margin.html">
+            <li>CSS Padding & Margin</li>
+          </a>
+          <a href="css-box-model.html">
+            <li>CSS Box Model</li>
+          </a>
+          <a href="quiz-space.html">
+            <li>Unit Quiz</li>
+          </a>
+          <h2>Text & Content</h2>
+          <a href="css-font.html">
+            <li>CSS Font</li>
+          </a>
+          <a href="css-text.html">
+            <li>CSS Text</li>
+          </a>
+          <a href="css-align.html">
+            <li>CSS Align</li>
+          </a>
+          <a href="quiz-content.html">
             <li>Unit Quiz</li>
           </a>
           <br />
           <div class="sidebtns">
-            <a href="what-is-coding.html" class="sidebtn">Back</a>
-            <a href="finish.html" class="sidebtn">Next</a>
+            <a href="/maclearn/" class="sidebtn">Back</a>
+            <a href="" class="sidebtn">Next</a>
           </div>
         </ul>
-      </div>
-      <div class="tbar" id="tbar">
-        <h2 class="bart">HTML Special Characters</h2>
-        <div class="bard">1.17.2024</div>
-        <div class="icons">
-          <img
-            src="/maclearn/icons/star-regular.svg"
-            alt="Favorite"
-            id="favorite"
-            class="icon"
-          />
-          <img
-            src="/maclearn/icons/share-solid.svg"
-            alt="Share"
-            id="favorite"
-            class="icon"
-          />
-          <img
-            src="/maclearn/icons/flag.svg"
-            alt="Report"
-            id="favorite"
-            class="icon"
-          />
-        </div>
       </div>
       <script src="app.js"></script>
       <div class="flex">
@@ -173,8 +160,8 @@
                   font-size: 27px;
                 "
               >
-                Click "start" to test your HTML code efficiency skills and
-                knowledge!
+                Click "start" to see what you know about basic CSS syntax and
+                implementation!
               </div>
             </div>
           </div>
@@ -231,17 +218,18 @@
                 "% correct. <br> Go back, review, and improve your score!";
               start.innerHTML = "Review!";
               start.addEventListener("click", () => {
-                window.location.href = "/maclearn/coding/html/html-semantics.html";
+                window.location.href =
+                  "/maclearn/coding/css/articles/css-intro.html";
               });
               if (percentage > 80) {
                 results.innerHTML =
                   "Your quiz score is " +
                   percentage +
-                  "% correct! <br> Good job, you finished the Efficient Code unit! Move on and explore how to handle users on your website!";
+                  "% correct! <br> Move on to learn more CSS properties and tricks!";
                 start.innerHTML = "Go!";
                 start.addEventListener("click", () => {
                   window.location.href =
-                    "/maclearn/coding/html/html-forms.html";
+                    "/maclearn/coding/css/articles/css-colors.html";
                 });
               }
             }
@@ -255,7 +243,7 @@
               answerButtonsElement.classList.remove("hide");
               results.classList.add("hide");
               start.innerHTML = "Next";
-              if (currentQuestionIndex === 1) {
+              if (currentQuestionIndex === 2) {
                 start.innerHTML = "Finish";
               }
             } else {
@@ -280,7 +268,7 @@
           function setNextQuestion() {
             reset();
             showQuestion(questions[currentQuestionIndex]);
-            if (currentQuestionIndex === 1) {
+            if (currentQuestionIndex === 2) {
               start.innerHTML = "Finish";
             }
           }
@@ -336,26 +324,21 @@
             answerArray[currentQuestionIndex] =
               selectedAnswer.parentElement.innerHTML;
           }
-          //TODO: EDIT THESE QESTIONS
+
           const questions = [
             {
-              question: "Which HTML entity is syntaxed correctly?",
+              question: "What does CSS do?",
               answers: [
-                { text: "&#copy;", correct: false },
-                { text: "&excl;", correct: true },
-                { text: "&199;", correct: false },
-                { text: "#199;", correct: false },
+                { text: "It adds functionality to a website.", correct: false },
+                { text: "It creates a website's content.", correct: false },
+                {
+                  text: "It's a database system used in web servers.",
+                  correct: false,
+                },
+                { text: "It styles the design of a website.", correct: true },
               ],
             },
-            {
-              question: "What's the semantic tag for creating image captions?",
-              answers: [
-                { text: "<caption>", correct: false },
-                { text: "<description>", correct: false },
-                { text: "<cap>", correct: false },
-                { text: "<figcaption>", correct: true },
-              ],
-            },
+            //TODO: add more questions
           ];
         });
       </script>

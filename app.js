@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const close = document.getElementById("closea");
   close.addEventListener("click", function () {
     close.parentElement.parentElement.style.display = "none";
-    localStorage.setItem("maclearnclosee","closed");
+    localStorage.setItem("maclearncloseee","closed");
   })
   document.addEventListener("mousemove", function (event) {
     if (event.clientX <= 5 && bar.classList.contains("movingbar") !== true) {
